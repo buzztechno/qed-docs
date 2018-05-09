@@ -96,4 +96,8 @@ curl -X GET \
 }
 ```
 
+## PDF Generation
+
+Documentation is not ready yet.
+
 
