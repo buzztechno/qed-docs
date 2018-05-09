@@ -139,7 +139,7 @@ curl -X POST \
 |`certificate`|Document title|"Certificate of Existence"|
 |`description`|Brief description|"This certificate documents the existence of a file on the blockchain."|
 |`details`|*translatable text*|"Details"|
-|`encryption`|Encryption explaination text|"The checksum of the file was generated using the cryptographic hash function SHA256 (Secure Hash Algorithm 256)"|
+|`encryption`|Encryption explanation text|"The checksum of the file was generated using the cryptographic hash function SHA256 (Secure Hash Algorithm 256)"|
 |`check_tx`|*translatable text*|"Check the transaction"|
 |`download_hint`|*translatable text*|"The file can be downloaded here"|
 |`verify_hint`|*translatable text*|"To verify the file manually you can use this tool to generate a checksum and compare to the hash stored on the blockchain"|
