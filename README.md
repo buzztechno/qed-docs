@@ -128,6 +128,7 @@ curl -X POST \
     -d '{
         "i18n": {...} // See below for full set of i18n options
         "address": "Immoweb s.a., Avenue Général Dumonceau, 56, B-1190 Forest, Belgium" // Address field
+        "online_check": <URL TO SHA256 ONLINE VALIDATION TOOL> // defaults to https://emn178.github.io/online-tools/sha256_checksum.html 
         "logo_url": "http://example.com/logo.png"  // Please make sure that the image is scaled appropriately
     }'
 ```
@@ -137,19 +138,18 @@ curl -X POST \
 |---|-------|----|
 |`certificate`|Document title|"Certificate of Existence"|
 |`description`|Brief description|"This certificate documents the existence of a file on the blockchain."|
-|`details`|*translatable text*|Details|
+|`details`|*translatable text*|"Details"|
 |`encryption`|Encryption explaination text|"The checksum of the file was generated using the cryptographic hash function SHA256 (Secure Hash Algorithm 256)"|
 |`check_tx`|*translatable text*|"Check the transaction"|
 |`download_hint`|*translatable text*|"The file can be downloaded here"|
 |`verify_hint`|*translatable text*|"To verify the file manually you can use this tool to generate a checksum and compare to the hash stored on the blockchain"|
-|`no_file`||"The file was stored outside of the scope of the service. The creator is responsible for providing the original data for evidence.|
-|`i18n_online_check`|||
-|`i18n_blockchain_data`||"Blockchain data"|
-|`i18n_block_number`||"Network name"|
-|`i18n_block_date`|||
-|`i18n_file_hash`||
-|`i18n_sender_account`||
-|`i18n_network_id`|||
-|`i18n_network_name`||"Network name"|
-|`i18n_transaction_id`||"Transaction ID"|
+|`no_file`|*translatable text*|"The file was stored outside of the scope of the service. The creator is responsible for providing the original data for evidence.|
+|`i18n_blockchain_data`|*translatable text*|"Blockchain data"|
+|`i18n_block_number`|*translatable text*|"Block no."|
+|`i18n_block_date`|*translatable text*|"Block date"|
+|`i18n_file_hash`|*translatable text*|"File hash"|
+|`i18n_sender_account`|*translatable text*|"Sender account"|
+|`i18n_network_id`|*translatable text*|"Network ID"|
+|`i18n_network_name`|*translatable text*|"Network name"|
+|`i18n_transaction_id`|*translatable text*|"Transaction ID"|
 
