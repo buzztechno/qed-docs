@@ -43,7 +43,9 @@ curl -X POST \
 
 #### Output
 
-Due to the asynchronous nature of the blockchain interaction a report can have different states which are directly related to the transaction state on the blockchain. At which time a blockchain transaction is available and confirmed depends on both low level implementation details of a concrete blockchain and the high level SDKs wrapping blockchain interaction functionalities. For a more detailed description of the report resource, please jump to the [report detail output section](#detail-output).
+Due to the asynchronous nature of the blockchain interaction, a report can have different states which are directly related to the transaction state on the blockchain. At which time a blockchain transaction is available and confirmed depends on both low level implementation details of the concrete chain and the high level SDKs wrapping blockchain interaction functionalities.
+
+For a more detailed description of the transaction resource, please jump to the [transaction section](#transaction).
 
 ```
 {
@@ -75,7 +77,7 @@ curl -X GET \
     -H 'Content-Type: application/json'
 ```
 
-#### Output<a name="detail-output"></a>
+#### Output
 
 ```
 {
@@ -96,8 +98,58 @@ curl -X GET \
 }
 ```
 
-## PDF Generation
+### Transaction information<a name="transaction"></a>
 
-Documentation is not ready yet.
+| Key | Type | Description | Example |
+| --- | ---- | ----------- | ------- |
+| `hash` | `string` | Deterministic hash of the transaction which can be used to access details of the transaction. | "af051c4d..." |
+|`data`|`JSON`|Blockchain-dependent data representation|*{"id": "fdcbb4e...", "paging_token": "38112560532193280", "hash": "fdcbb4e...", "ledger": 8873772, "created_at": "2018-05-09T13:20:53Z", "source_account": "GAS5AL...", "source_account_sequence": "36978014856151081", "fee_paid": 100, "operation_count": 1, ...}*|
+|`block_height`|`integer`|Block number|8872466|
+|`block_time`|`ISO 8601`|Validation time of the block which is represents the time the proof has been ultimately persisted|"2018-05-09T11:32:03Z"|
+|`explorer_url`|`URL`|Points to a blockchain explorer transaction detail page |[https://testnet.steexp.com/tx/642b07917...8cc4123a970b6](https://testnet.steexp.com/tx/642b0791738b1d202cb2e6d3c7fd811310cf0d990baba1a2b418cc4123a970b6)|
+|`network_name`|`string`|High level name of the concrete blockchain network| "Stellar Testnet" |
+|`network_id`|`string` or `integer`|Internal identifier for the network which lies within the scope of the concrete blockchain family. It can take multiple forms depending on the blockchain.|"cee0302d59844d32b...a37abedf28ecd472"|
 
+
+### PDF Generation
+
+Generate a custom proof of existence certificate PDF.  
+
+#### Endpoint
+
+`https://api.qed.digital/v1/reports/<slug>/pdf`
+    
+#### cURL example
+
+```
+curl -X POST \
+    https://api.qed.digital/v1/reports/<slug>/pdf/
+    -H 'Authorization: app-token l1MttwRc4SJcuQwDabcDFF23noLjgEyUFmWZZZIgCVekwlOmBmGtDtaEvxJHBuM3' \
+    -d '{
+        "i18n": {...} // See below for full set of i18n options
+        "address": "Immoweb s.a., Avenue Général Dumonceau, 56, B-1190 Forest, Belgium" // Address field
+        "logo_url": "http://example.com/logo.png"  // Please make sure that the image is scaled appropriately
+    }'
+```
+
+#### i18n Parameters
+|Key|Description|Default|
+|---|-------|----|
+|`certificate`|Document title|"Certificate of Existence"|
+|`description`|Brief description|"This certificate documents the existence of a file on the blockchain."|
+|`details`|*translatable text*|Details|
+|`encryption`|Encryption explaination text|"The checksum of the file was generated using the cryptographic hash function SHA256 (Secure Hash Algorithm 256)"|
+|`check_tx`|*translatable text*|"Check the transaction"|
+|`download_hint`|*translatable text*|"The file can be downloaded here"|
+|`verify_hint`|*translatable text*|"To verify the file manually you can use this tool to generate a checksum and compare to the hash stored on the blockchain"|
+|`no_file`||"The file was stored outside of the scope of the service. The creator is responsible for providing the original data for evidence.|
+|`i18n_online_check`|||
+|`i18n_blockchain_data`||"Blockchain data"|
+|`i18n_block_number`||"Network name"|
+|`i18n_block_date`|||
+|`i18n_file_hash`||
+|`i18n_sender_account`||
+|`i18n_network_id`|||
+|`i18n_network_name`||"Network name"|
+|`i18n_transaction_id`||"Transaction ID"|
 
