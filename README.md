@@ -1,11 +1,15 @@
 # qed-docs
 
-In order to use the QED REST API, you must obtain an API Key. Please get in contact: mail@qed.digital
+
+![QED Diagram](https://github.com/move-fast/qed-docs/blob/master/qed.png)
+
+The QED REST API provides an easy way to leverage blockchain technology attaching immutable timestamps to your files.
 
 ## Usage
 
-Each HTTP request has to be authenticated by an API key. The API key is submitted via the `Authorization` header, i.e.
+Each HTTP request has to be authenticated by an API key. In order to use the QED REST API, you must obtain an API Key. Please get in contact: mail@qed.digital.
 
+The API key is submitted via the `Authorization` header as `app-token <API_KEY>`, i.e.
 ```
 curl -X POST \
     https://api.qed.digital/...
@@ -14,7 +18,7 @@ curl -X POST \
 
 ### Storing a hash to the blockchain
 
-An array of 32 bytes can be stored to the blockchain. In order to make the proof of existence of your file collision-free we highly recommend to use SHA256 as the hashing algorithm to securely create a checksum for your file. The hash is expected to be encoded as a hex digest.
+An array of 32 bytes can be stored to the blockchain. In order to make the hash of your file collision-free we highly recommend to use SHA256 as the hashing algorithm to securely create a checksum for your file. The hash is expected to be encoded as a hex digest.
 
 #### Endpoint
 
