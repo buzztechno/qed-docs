@@ -62,7 +62,7 @@ Due to the asynchronous nature of the blockchain interaction a report can have d
 
 ### Retrieving the report status
 
-#### endpoint
+#### Endpoint
 
 `https://api.qed.digital/v1/reports/<slug>`
 
