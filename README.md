@@ -80,7 +80,7 @@ curl -X GET \
 ```
 {
   "slug": "U1FKSif",
-  "status": "confirmed", // "pending"|"confirmed"|"failed"
+  "status": "confirmed",
   "name": "My new appartement",
   "note": "This is so amazing",
   "hash": "deadbeef",
