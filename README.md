@@ -26,11 +26,11 @@ An array of 32 bytes can be stored to the blockchain. In order to make the hash 
 
 #### Data
 
-|Key|Type|Description|Example|
-|---|-----------|-------|----|
-| ``name`` | `string` | an arbitrary title | "My new appartement"
-| `note` | `string` | an arbitrary note | "This is so amazing."
-| `hash` | `string` | hex encoded string representing a byte array (maximum bytes 32) | "646412deadbeef8812"
+|Key|Type|Optional|Description|Example|
+|---|----|--------|-------|----|
+| ``name`` | `string` | x | an arbitrary title | "My new appartement"
+| `note` | `string` | x | an arbitrary note | "This is so amazing."
+| `hash` | `string` | - | hex encoded string representing a byte array (maximum bytes 32) | "646412deadbeef8812"
 
 #### cURL example
 ```
