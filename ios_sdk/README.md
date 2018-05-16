@@ -211,30 +211,6 @@ If you use the methods on this class without calling this setup method first, th
 
 A _QEDFile_ represents a data file locally stored on the user device that needs to be time stamped and notarized on the blockchain
 
-### Static properties
-
-```swift
-static var qedDirectory : URL
-```
-Default storage directory for the `QEDFile` content file in the app's bundle.
-
-**Discussion**
-
-You can use this directory to store the files you want to represent as `QEDFile`'s for notarization.
-If you use this default directory, then you can create `QEDFile` instances directly with `name`, `ext` and `dateCreated` values for the file, and the local `fileURL` location will be assumed to be on the root level of this directory.
-
- ___
-
- ```swift
- static var pdfDirectory : URL
- ```
-  Storage dictionary for the downloaded PDF files in the app bundle.
-
- **Discussion**
-
- When downloading PDF certificates for a `QEDFile` using the [_QEDAPI_ class](#qedapi-class-reference), they will be automatically stored on the root level of this local directory.
- You can get the exact PDF url by accessing the `pdfURL` property of the `QEDFile`.
-
 ### Initializers
 
 ```swift
@@ -285,7 +261,196 @@ For a list of valid _QEDAPI_ report response attribues see [here](#constants-rep
 
 `dict` must include `name`, `slug`, `hash`, `dateTaken` string and `status` as a minimum otherwise the instantiation will fail and return `nil`.
 
-The `fileURL` will be infered from the default file storage `qedDirectory` and the calculated instance `name` and extension(`ext`). If you manage local file storage on a separate location, you must pass the `fileURL` indicating the local URL for the `QEDFile` content file if existing. You can also update the `fileURL` attribute at a later time.
+If `fileURL` is `nil`, the instance `fileURL` attribute will be infered from the default file storage `qedDirectory` and the calculated instance `name` and extension(`ext`).
+
+If you manage local file storage on a separate location, you should pass the `fileURL` indicating the local URL for the `QEDFile` content file if existing. You can also update the `fileURL` attribute at a later time.
+
+### Static properties
+
+```swift
+static var qedDirectory : URL
+```
+Default storage directory for the `QEDFile` content file in the app's bundle.
+
+**Discussion**
+
+You can use this directory to store the files you want to represent as `QEDFile`'s for notarization.
+If you use this default directory, then you can create `QEDFile` instances directly with `name`, `ext` and `dateCreated` values for the file, and the local `fileURL` location will be assumed to be on the root level of this directory.
+
+ ___
+
+ ```swift
+ static var pdfDirectory : URL
+ ```
+ Storage dictionary for the downloaded PDF files in the app bundle.
+
+ **Discussion**
+
+ When downloading PDF certificates for a `QEDFile` using the [_QEDAPI_ class](#qedapi-class-reference), they will be automatically stored on the root level of this local directory.
+ You can get the exact PDF url by accessing the `pdfURL` property of the `QEDFile`.
+
+### Instance Properties
+```swift
+var name : String
+```
+The name for the associated file without extension
+ ___
+
+```swift
+var ext : String
+```
+A string representing the type of file (i.e the extension).
+___
+
+```swift
+var ext : String
+```
+A string representing the type of file (i.e the extension).
+___
+
+```swift
+var dateTaken : Date
+```
+The client date when the file was created.
+
+**Discussion**
+
+Used only as metadata.
+
+Will differ from the timestamp on the blockchain certificate.
+___
+
+```swift
+var note : String?
+```
+An optional string with a note about the file.
+
+**Discussion**
+
+Used only as metadata.
+___
+
+```swift
+var slug : String?
+```
+A unique string that identifies the reported file in the backend.
+
+**Discussion**
+
+When initially created, this value is `nil` and gets updated by the relevant [_QEDAPI_](#qedapi-class-reference) report methods once a report is submitted to the backend.
+___
+
+```swift
+var hash : String?
+```
+The hash to be stored on the blockchain as proof of existence of the associated file.
+
+**Discussion**
+
+This value must not be `nil` when issuing a report with the [_QEDAPI_](#qedapi-class-reference).
+
+It is recomended to use _SHA256_ to calculate the hash, and the convenience method `withCalculatedHash()` will take care of this for you.
+___
+
+```swift
+var proofStatus : ProofStatus
+```
+The current status of the notarization on the blockchain as reported by the backend.
+
+**Discussion**
+
+`ProofStatus` enum possible values are:
+- `undefined`: The file has not been requested for certification yet
+- `pending`: The report has been submitted to blockchain but is not yet confirmed
+- `confirmed`: Report confirmed in blockchain
+- `failed`: Report was submitted to blockchain but failed
+___
+
+```swift
+var fileURL : URL
+```
+The URL where the file is meant to be locally stored.
+
+**Discussion**
+
+There is no guarantee that a file actually exists at this URL. See `localFileLocation`.
+___
+
+```swift
+var localFileLocation : URL?
+```
+The actual location url for the local file.
+
+**Discussion**
+
+Will return `nil` if the file addressed by the `fileURL` does not exist.
+___
+
+```swift
+var pdfURL : URL
+```
+The URL for the PDF certificate file when locally stored.
+
+**Discussion**
+
+This property always holds a URL value without checking if the file actually exist.
+Use `hasLocalPDF` to check for PDF file existence
+___
+
+```swift
+var hasLocalFile : Bool
+```
+Indicates if the instance references and existing local file at `fileURL`
+___
+
+```swift
+var isSynchedWithServer : Bool
+```
+Indicates if the file has already been reported to the server. (i.e. if it has a `slug`)
+___
+
+```swift
+var hasLocalPDF : Bool
+```
+Indicates if the instance references and existing local certificate file at `pdfURL`
+
+### Instance Methods
+
+```swift
+func withCalculatedHash() -> QEDFile
+```
+Returns a `QEDFile` instance with the `hash` calculated from the file at `localFileLocation`.
+
+**Return Value**
+
+Returns a copy of the current instance where the _SHA256_ `hash` has been calculated from the data in file at `localFileLocation`.
+
+If there is no local file (i.e. `localFileLocation == nil`) then the same unaffected instance is returned (i.e. `self`)
+
+___
+
+```swift
+func merge(withFile file : QEDFile) -> QEDFile
+```
+Returns a new `QEDFile` instance by merging the current instance with `file`.
+
+**Return Value**
+
+Returns a new `_QEDFile_` instance.
+All the properties of the `file` instance that are non `nil` will prevale over the values for the properties of the current instance, the `proofStatus` is also merged
+
+___
+
+```swift
+func dictionaryRepresentation() -> [String:String]
+```
+Returns a dictionary representation of the instance
+
+**Return Value**
+
+Returns a dictionary compatible with the [_QEDAPI_](#qedapi-class-reference) reporting functionality.
+
+The keys are `String` instances as described [here](#constants-representing-api-attributes), the values are `String` instances derived from the instance properties.
 
 ## _QEDModel_ Type Reference
 
