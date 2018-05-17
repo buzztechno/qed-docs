@@ -11,13 +11,13 @@ Two more convenience types are provided which are optional to use:
 
 # Contents
 
-1. [Getting Started](#getting-started)
-1. Type Reference
+- [Getting Started](#getting-started)
+- Type Reference
     - [`QEDAPI`](reference/QEDAPI.md)
     - [`QEDFile`](reference/QEDFile.md)
     - [`QEDModel`](reference/QEDModel.md)
     - [`QEDVideoPlayRecordViewController`](reference/QEDVideoPlayRecordViewController.md)
-1. Protocols Reference
+- Protocols Reference
     - [`QEDVideoPlayRecordViewControllerDelegate`](reference/QEDVideoPlayRecordViewControllerDelegate.md)
 
 # Getting Started
