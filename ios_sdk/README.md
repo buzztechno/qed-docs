@@ -17,7 +17,7 @@ Two more convenience types are provided which are optional to use:
     - [`QEDFile`](reference/QEDFile.md)
     - [`QEDModel`](reference/QEDModel.md)
     - [`QEDVideoPlayRecordViewController`](reference/QEDVideoPlayRecordViewController.md)
-1. [Protocols Reference](#protocols)
+1. Protocols Reference
     - [`QEDVideoPlayRecordViewControllerDelegate`](reference/QEDVideoPlayRecordViewControllerDelegate.md)
 
 # Getting Started

@@ -24,7 +24,7 @@ init?(with fileURL : URL)
 
 **Discussion**
 
-The `name`, `ext` and `dateTaken` will be inferred from the file at `fileURL`. If the content file at `fileURL` does not exist, the initialisation fails and returns `nil`
+The [`name`](#name), [`ext`](#ext) and [`dateTaken`](#dateTaken) will be inferred from the file at `fileURL`. If the content file at `fileURL` does not exist, the initialisation fails and returns `nil`
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 `Initialiser`
 
-Creates a `QEDFile` instance with a given `name`, extension(`ext`) and `dateTaken`.
+Creates a `QEDFile` instance with a given [`name`](#name), [`ext`](#ext) and [`dateTaken`](#dateTaken).
 
 **Declaration**
 
@@ -48,9 +48,9 @@ init(withName name : String, extension ext : String, dateTaken: Date)
 
 **Discussion**
 
-The `fileURL` will be inferred from the default file storage [`qedDirectory`](#qeddirectory), the `name` and the extension(`ext`)
+The [`fileURL`](#fileurl) will be inferred from the default file storage [`qedDirectory`](#qeddirectory), the [`name`](#name) and the extension([`ext`](#ext)).
 
-The `dateTaken` is just used as metadata and will be different that the timestamp on the blockchain certificate.
+The [`dateTaken`](#dateTaken) is just used as metadata and will be different that the timestamp on the blockchain certificate.
 
 ___
 
@@ -73,13 +73,11 @@ init?(fromQEDAPIResponseDict dict : [String:Any], fileURL : URL? = nil)
 
 **Discussion**
 
-For a list of valid `QEDAPI` report response attributes see [here](QEDAPI#constants-representing-api-attributes).
+`dict` must include `name`, `slug`, `hash`, `dateTaken` string and `status` values as a minimum otherwise the instantiation will fail and return `nil`.
 
-`dict` must include `name`, `slug`, `hash`, `dateTaken` string and `status` as a minimum otherwise the instantiation will fail and return `nil`.
+If `fileURL` is `nil`, the instance [`fileURL`](#fileurl) attribute will be inferred from the default file storage [`qedDirectory`](#qeddirectory) and the calculated instance [`name`](#name) and extension([`ext`](#ext)).
 
-If `fileURL` is `nil`, the instance `fileURL` attribute will be inferred from the default file storage [`qedDirectory`](#qeddirectory) and the calculated instance `name` and extension(`ext`).
-
-If you manage local file storage on a separate location, you should pass the `fileURL` indicating the local URL for the `QEDFile` content file if existing. You can also update the `fileURL` attribute at a later time.
+If you manage local file storage on a separate location, you should pass the `fileURL` indicating the local URL for the `QEDFile` content file if existing. You can also update the [`fileURL`](#fileurl) attribute at a later time.
 
 ## Default Storage Directories
 
@@ -98,7 +96,7 @@ static var qedDirectory : URL
 **Discussion**
 
 You can use this directory to store the files you want to represent as `QEDFile`'s for notarisation.
-If you use this default directory, then you can create `QEDFile` instances directly with `name`, `ext` and `dateCreated` values for the file, and the local `fileURL` location will be assumed to be on the root level of this directory.
+If you use this default directory, then you can create `QEDFile` instances using [`init(withName:extension:dateTaken:)`](#initwithnameextensiondatetaken), and the local [`fileURL`](#fileurl) location will be assumed to be on the root level of this directory.
 
  ___
 
@@ -118,7 +116,7 @@ Storage dictionary for the downloaded PDF files in the app bundle.
 
  When downloading PDF certificates for a `QEDFile` using the [`QEDAPI`](QEDAPI.md) class, they will be automatically stored on the root level of this local directory.
 
- You can get the exact PDF url by accessing the `pdfURL` property of the `QEDFile`.
+ You can get the exact PDF url by accessing the [`pdfURL`](#pdfurl) property of the `QEDFile`.
 
 ## File Attributes and Metadata
 
@@ -199,7 +197,8 @@ var slug : String?
 
 **Discussion**
 
-When initially created, this value is `nil` and gets updated once a report is submitted to the backend via the [`QEDAPI.sendReport(for:completion:)](QEDAPI.md#sendreportforcompletion) method .
+When initially created, this value is `nil`.
+When using the [`QEDAPI.sendReport(for:completion:)](QEDAPI.md#sendreportforcompletion) method to submit reports, this attribute gets updated based on response from server.
 ___
 
 ### `isSynchedWithServer`
@@ -376,7 +375,7 @@ func dictionaryRepresentation() -> [String:String]
 
 Returns a dictionary compatible with the [`QEDAPI`](QEDAPI.md) reporting functionality.
 
-The keys are `String` instances as described [here](QEDAPI.md#constants-representing-api-attributes), the values are `String` instances derived from the respective instance attributes.
+The keys are `String` instances as described on [_QED API_](../../README.md), the values are `String` instances derived from the respective instance attributes.
 
 ## Interacting with other instances
 

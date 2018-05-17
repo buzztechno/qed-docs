@@ -49,14 +49,14 @@ The `completion` handler takes the following parameters:
 
 | Parameter        | Description |
 | ---------        | ----------- |
-| `updatedFile`    | `nil` if request failed, otherwise a [`QEDFile`](QEDFile.md) instance created as a copy of `file` with an updated `proofStatus` based on API response data|
+| `updatedFile`    | `nil` if request failed, otherwise a [`QEDFile`](QEDFile.md) instance created as a copy of `file` with an updated [`proofStatus`](QEDFile.md#proofstatus) based on API response data|
 | `error`          | An error object that indicates why the request failed, or `nil` if the request was successful|
 
 **Discussion**
 
 After posting a report for a `file` for the first time, a blockchain proof is initiated.
 
-The server will respond with the updated report including blockchain transaction details. In most cases the report status will be `pending` when posting for the first time.
+The server will respond with the updated report including blockchain transaction details. In most cases the report status will be [`pending`](QEDFile.md#proofstatus) when posting for the first time.
 
 ___
 
@@ -85,7 +85,3 @@ The `completion` handler takes the following parameters:
 | `error`          | An error object that indicates why the request failed, or `nil` if the request was successful|
 
 **Discussion**
-
-After initial submission of a report, you use this method to update the [`QEDFile`](QEDFile.md) `file` properties from backend. Specially the `proofStatus`
-
-## Constants representing API attributes
