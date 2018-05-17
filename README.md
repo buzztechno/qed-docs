@@ -138,6 +138,7 @@ curl -X POST \
 ```
 
 #### i18n Parameters
+
 |Key|Description|Default|
 |---|-------|----|
 |`certificate`|Document title|"Certificate of Existence"|
