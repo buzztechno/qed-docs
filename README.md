@@ -1,9 +1,12 @@
-# qed-docs
+# QED API
 
 The QED REST API provides an easy way to leverage blockchain technology attaching immutable timestamps to your files.
 
 ![QED Diagram](images/qed.png)
 
+## IOS SDK
+
+An IOS SDK providing a convenience wrapper over the QED REST API and other convenience types is available [here](ios_sdk/README.md)
 
 ## Usage
 
