@@ -1,8 +1,8 @@
 # qed-docs
 
-The QED REST API provides an easy way to leverage blockchain technology attaching immutable timestamps to your files. 
+The QED REST API provides an easy way to leverage blockchain technology attaching immutable timestamps to your files.
 
-![QED Diagram](https://github.com/move-fast/qed-docs/blob/master/qed.png)
+![QED Diagram](images/qed.png)
 
 
 ## Usage
@@ -72,7 +72,7 @@ For a more detailed description of the transaction resource, please jump to the 
 
 `https://api.qed.digital/v1/reports/<slug>`
 
-#### cURL example 
+#### cURL example
 
 ```
 curl -X GET \
@@ -122,7 +122,7 @@ Generate a custom proof of existence certificate PDF.
 #### Endpoint
 
 `https://api.qed.digital/v1/reports/<slug>/pdf`
-    
+
 #### cURL example
 
 ```
@@ -132,7 +132,7 @@ curl -X POST \
     -d '{
         "i18n": {...} // See below for full set of i18n options
         "address": "Immoweb s.a., Avenue Général Dumonceau, 56, B-1190 Forest, Belgium" // Address field
-        "online_check": <URL TO SHA256 ONLINE VALIDATION TOOL> // defaults to https://emn178.github.io/online-tools/sha256_checksum.html 
+        "online_check": <URL TO SHA256 ONLINE VALIDATION TOOL> // defaults to https://emn178.github.io/online-tools/sha256_checksum.html
         "logo_url": "http://example.com/logo.png"  // Please make sure that the image is scaled appropriately
     }'
 ```
@@ -156,4 +156,3 @@ curl -X POST \
 |`i18n_network_id`|*translatable text*|"Network ID"|
 |`i18n_network_name`|*translatable text*|"Network name"|
 |`i18n_transaction_id`|*translatable text*|"Transaction ID"|
-

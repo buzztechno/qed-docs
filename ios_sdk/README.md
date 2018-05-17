@@ -2,23 +2,23 @@
 
 The IOS _QEDSDK_ provides a set of convenience instance types aimed to ease and shorten the development time for the usage of the [_QED REST API_](../README.md).
 
-The main type is the [_QEDAPI_ class](#qedapi-class-reference), which is a wrapper over the functionality of the [_QED REST API_](../README.md).
-The [_QEDFile_](#qedfile-type-reference) defines the representation of a data file to be reported to and notarized by the [_QED REST API_](../README.md). The [_QEDAPI_ class](#qedapi-class-reference) class receives and returns "file report" representations using the [_QEDFile_ type](#qedfile-type-reference).
+The main type is the [`QEDAPI`](#qedapi-class-reference) class, which is a wrapper over the functionality of the [_QED REST API_](../README.md).
+The [`QEDFile`](#qedfile-type-reference) defines the representation of a data file to be reported to and notarized by the [_QED REST API_](../README.md). The [`QEDAPI`](#qedapi-class-reference) class receives and returns "file report" representations using the [`QEDFile`](#qedfile-type-reference) struct.
 
 Two more convenience types are provided which are optional to use:
-- The [_QEDModel_](#qedmodel-type-reference) provides a set of convenience methods to aid on persisting and retrieving a data model to/from local storage.
-- The [_QEDVideoPlayRecordViewController_](#qedvideoplayrecordviewcontroller-class-reference) provides in a simple interface, the necessary functionality to play and record videos. You can use this view controller out of the box if your application is meant for video capturing for notarization.
+- The [`QEDModel`](#qedmodel-type-reference) provides a set of convenience methods to aid on persisting and retrieving a data model to/from local storage.
+- The [`QEDVideoPlayRecordViewController`](#qedvideoplayrecordviewcontroller-class-reference) provides in a simple interface, the necessary functionality to play and record videos. You can use this view controller out of the box if your application is meant for video capturing for notarization.
 
 # Contents
 
 1. [Getting Started](#getting-started)
 1. [Type Reference](#types)
-    - [_QEDAPI_](#qedapi-class-reference)
-    - [_QEDFile_](#qedfile-type-reference)
-    - [_QEDModel_](#qedmodel-type-reference)
-    - [_QEDVideoPlayRecordViewController_](#qedvideoplayrecordviewcontroller-class-reference)
+    - [`QEDAPI`](#qedapi-class-reference)
+    - [`QEDFile`](#qedfile-type-reference)
+    - [`QEDModel`](#qedmodel-type-reference)
+    - [`QEDVideoPlayRecordViewController`](#qedvideoplayrecordviewcontroller-class-reference)
 1. [Protocols Reference](#protocols)
-    - [_QEDVideoPlayRecordViewControllerDelegate_](#qedvideoplayrecordviewcontrollerdelegate-protocol-reference)
+    - [`QEDVideoPlayRecordViewControllerDelegate`](#qedvideoplayrecordviewcontrollerdelegate-protocol-reference)
 
 # Getting Started
 
@@ -72,9 +72,9 @@ In order to use the _QEDSDK_, you must obtain an API Key. Please get in contact:
     ```swift
     QEDAPI.setup(with: "YOUR_API_KEY")
     ```
-1. Prepare a [_QEDFile_](#qedfile-type-reference) representing a local data file to be reported and notarized
+1. Prepare a [`QEDFile`](#qedfile-type-reference) representing a local data file to be reported and notarized
 
-    - Create a [_QEDFile_](#qedfile-type-reference) instance. You can instantiate from the local URL for an existing file.
+    - Create a [`QEDFile`](#qedfile-type-reference) instance. You can instantiate from the local URL for an existing file.
         ```swift
         var file = QEDFile(with: localFileURL)!
         ```
@@ -82,7 +82,7 @@ In order to use the _QEDSDK_, you must obtain an API Key. Please get in contact:
         ```swift
         file = file.withCalculatedHash()
         ```
-1. Use the [_QEDAPI_ class](#qedapi-class-reference) to interface with the [_QED REST API_](../README.md) server
+1. Use the [`QEDAPI`](#qedapi-class-reference) class methods to interact with the [_QED REST API_](../README.md) server
 
     - Issue a report to the backend for notarization
         ```swift
@@ -115,7 +115,7 @@ In order to use the _QEDSDK_, you must obtain an API Key. Please get in contact:
             }
         }
         ```
-    - Once the [_QEDFile_](#qedfile-type-reference) status is `confirmed`, you can request a PDF certificate from backend
+    - Once the [`QEDFile`](#qedfile-type-reference) status is `confirmed`, you can request a PDF certificate from backend
         ```swift
         QEDAPI.generatePDF(for: file) { (success, error) in
             // Make sure to perform UI update related actions on main thread
@@ -134,18 +134,18 @@ In order to use the _QEDSDK_, you must obtain an API Key. Please get in contact:
 
 # Types
 
-## _QEDAPI_ Class Reference
+## `QEDAPI` Class Reference
 
 `Class`
 
-The _QEDAPI_ provides a wrapper class on the [_QED REST API_](../README.md).
+The `QEDAPI` provides a wrapper class on the [_QED REST API_](../README.md).
 
 ### Setup
 
 ```swift
 class func setup(with apiKey : String)
 ```
-Will setup the _QEDAPI_ shared instance with the required `apiKey` to make authenticated requests.
+Will setup the `QEDAPI` shared instance with the required `apiKey` to make authenticated requests.
 
 | Parameter | Description |
 | --------- | ----------- |
@@ -165,14 +165,14 @@ If you use the methods on this class without calling this setup method first, th
 
  | Parameter  | Description |
  | ---------  | ----------- |
- | `file`     | The [_QEDFile_](#qedfile-type-reference) representing the file content to be notarized|
+ | `file`     | The [`QEDFile`](#qedfile-type-reference) representing the file content to be notarized|
  |`completion`| The completion handler to call when the request is complete. This handler is not called on the main thread |
 
  The `completion` handler takes the following parameters:
 
  | Parameter        | Description |
  | ---------        | ----------- |
- | `updatedFile`    | `nil` if request failed, otherwise a [_QEDFile_](#qedfile-type-reference) instance created as a copy of `file` with an updated `proofStatus` based on API response data|
+ | `updatedFile`    | `nil` if request failed, otherwise a [`QEDFile`](#qedfile-type-reference) instance created as a copy of `file` with an updated `proofStatus` based on API response data|
  | `error`          | An error object that indicates why the request failed, or `nil` if the request was successful|
 
  **Discussion**
@@ -190,26 +190,26 @@ If you use the methods on this class without calling this setup method first, th
 
   | Parameter | Description |
   | --------- | ----------- |
-  | `file`    | The [_QEDFile_](#qedfile-type-reference) representing the file content report to be updated from backend|
+  | `file`    | The [`QEDFile`](#qedfile-type-reference) representing the file content report to be updated from backend|
   |`completion`| The completion handler to call when the request is complete. This handler is not called on the main thread |
 
    The `completion` handler takes the following parameters:
 
    | Parameter        | Description |
    | ---------        | ----------- |
-   | `updatedFile`    | `nil` if request failed, otherwise a [_QEDFile_](#qedfile-type-reference) instance created as a copy of `file` updated based on API response data|
+   | `updatedFile`    | `nil` if request failed, otherwise a [`QEDFile`](#qedfile-type-reference) instance created as a copy of `file` updated based on API response data|
    | `error`          | An error object that indicates why the request failed, or `nil` if the request was successful|
   **Discussion**
 
-  After initial submission of a report, you use this method to update the [_QEDFile_](#qedfile-type-reference) `file` properties from backend. Specially the `proofStatus`
+  After initial submission of a report, you use this method to update the [`QEDFile`](#qedfile-type-reference) `file` properties from backend. Specially the `proofStatus`
 
 ### Constants representing API attributes
 
 
-## _QEDFile_ Type Reference
+## `QEDFile` Type Reference
 `Struct`
 
-A _QEDFile_ represents a data file locally stored on the user device that needs to be time stamped and notarized on the blockchain
+A `QEDFile` represents a data file locally stored on the user device that needs to be time stamped and notarized on the blockchain
 
 ### Initializers
 
@@ -252,12 +252,12 @@ Creates a `QEDFile` instance from a Dictionary from API response.
 
 | Parameter   | Description |
 | ---------   | ----------- |
-| `dict`      | A dictionary representation of a _QEDAPI_ qualified response with report data |
+| `dict`      | A dictionary representation of a `QEDAPI` qualified response with report data |
 | `fileURL`   | An optional URL indicating the local storage location of the associated file.|
 
 **Discussion**
 
-For a list of valid _QEDAPI_ report response attribues see [here](#constants-representing-api-attributes).
+For a list of valid `QEDAPI` report response attribues see [here](#constants-representing-api-attributes).
 
 `dict` must include `name`, `slug`, `hash`, `dateTaken` string and `status` as a minimum otherwise the instantiation will fail and return `nil`.
 
@@ -286,7 +286,7 @@ If you use this default directory, then you can create `QEDFile` instances direc
 
  **Discussion**
 
- When downloading PDF certificates for a `QEDFile` using the [_QEDAPI_ class](#qedapi-class-reference), they will be automatically stored on the root level of this local directory.
+ When downloading PDF certificates for a `QEDFile` using the [`QEDAPI` class](#qedapi-class-reference), they will be automatically stored on the root level of this local directory.
  You can get the exact PDF url by accessing the `pdfURL` property of the `QEDFile`.
 
 ### Instance Properties
@@ -337,7 +337,7 @@ A unique string that identifies the reported file in the backend.
 
 **Discussion**
 
-When initially created, this value is `nil` and gets updated by the relevant [_QEDAPI_](#qedapi-class-reference) report methods once a report is submitted to the backend.
+When initially created, this value is `nil` and gets updated by the relevant [`QEDAPI`](#qedapi-class-reference) report methods once a report is submitted to the backend.
 ___
 
 ```swift
@@ -347,7 +347,7 @@ The hash to be stored on the blockchain as proof of existence of the associated 
 
 **Discussion**
 
-This value must not be `nil` when issuing a report with the [_QEDAPI_](#qedapi-class-reference).
+This value must not be `nil` when issuing a report with the [`QEDAPI`](#qedapi-class-reference).
 
 It is recomended to use _SHA256_ to calculate the hash, and the convenience method `withCalculatedHash()` will take care of this for you.
 ___
@@ -436,7 +436,7 @@ Returns a new `QEDFile` instance by merging the current instance with `file`.
 
 **Return Value**
 
-Returns a new `_QEDFile_` instance.
+Returns a new ``QEDFile`` instance.
 All the properties of the `file` instance that are non `nil` will prevale over the values for the properties of the current instance, the `proofStatus` is also merged
 
 ___
@@ -448,14 +448,135 @@ Returns a dictionary representation of the instance
 
 **Return Value**
 
-Returns a dictionary compatible with the [_QEDAPI_](#qedapi-class-reference) reporting functionality.
+Returns a dictionary compatible with the [`QEDAPI`](#qedapi-class-reference) reporting functionality.
 
 The keys are `String` instances as described [here](#constants-representing-api-attributes), the values are `String` instances derived from the instance properties.
 
-## _QEDModel_ Type Reference
+## `QEDModel` Type Reference
+`Struct`
 
-## _QEDVideoPlayRecordViewController_ Class Reference
+`QEDModel` provides a set of helper methods to aid on persisting a data model ( represneted as an array of [`QEDFile`](#qedfile-type-reference) instances).
+
+Usage of `QEDModel` is optional and is meant just as an aid to speed up your data source implementation.
+
+### Static methods
+
+```swift
+static func persist(filesArray files : [QEDFile])
+```
+Will persist a given array of [`QEDFile`](#qedfile-type-reference) instances to _User Defaults_.
+
+| Parameter | Description |
+| --------- | ----------- |
+| `files`   | An array of [`QEDFile`](#qedfile-type-reference) instances representing your data model to be persisted locally to _User Defaults_ |
+
+**Discussion**
+
+Normally you will call this method when the app goes to background, passing your in memory model array for persisting.
+___
+
+```swift
+static func loadFromStore() -> [QEDFile]
+```
+Returns the locally persisted array of [`QEDFile`](#qedfile-type-reference) instances.
+
+**Return Value**
+
+Returns the currently persisted array of [`QEDFile`](#qedfile-type-reference) instances from _User Defaults_
+
+If no array is persisted currently in  _User Defaults_, an empty array will be returned.
+
+## `QEDVideoPlayRecordViewController` Class Reference
+`class`
+
+A _ViewController_ providing record and playback video functionality for locally stored video files.
+
+It will switch automatically between video playback and video recording modes depending on the internal value for the local stored video file.
+
+If a local video file is assigned, the controller will be in playback mode, otherwise in recording mode.
+
+If allowed by the `delegate`, a user can trigger the deletion of the local stored video file. After deletion the controller will switch to recording mode automatically.
+
+### Initializers
+
+```swift
+init(delegate : QEDVideoPlayRecordViewControllerDelegate, directory : URL, fileURL : URL? = nil, autoplay : Bool = false)
+```
+Initialize a `QEDVideoPlayRecordViewController` for presentation
+
+| Parameter  | Description |
+| ---------  | ----------- |
+| `delegate` | A `class` instance conforming to the [`QEDVideoPlayRecordViewControllerDelegate`](#qedvideoplayrecordviewcontrollerdelegate-protocol-reference) protocol. The delegate is not retained |
+| `directory` | A local file directory where to store the newly recorded video files |
+| `fileURL`   | An optional URL for a local video file. Defaults to `nil`|
+| `autoplay`  | An indication if the video should autoplay when initialized with an existing local video URL. Defaults to `false`|
+
+**Discussion**
+
+The instance provide both recording and playback of video content. It will switch automatically between video playback and video recording modes depending on the internal value of `fileURL`.
+
+When initialized with a valid `fileURL`, the controller will start on playback mode when presented and will play automatically if `autoplay == true`.
+
+If `fileURL == nil` on initialization, the controller will start on recording mode when presented.
+
 
 # Protocols
 
-## _QEDVideoPlayRecordViewControllerDelegate_ Protocol Reference
+## `QEDVideoPlayRecordViewControllerDelegate` Protocol Reference
+
+A class conforming to this protocol will receive the necessary method calls to handle the lifecycle for the video playback, recording and deletion from a [`QEDVideoPlayRecordViewController`](#qedvideoplayrecordviewcontroller-class-reference).
+
+### File Deletion
+
+```swift
+func videoPlayRecordController(_ controller: QEDVideoPlayRecordViewController, allowToDeleteFileAt fileURL : URL) -> Bool
+```
+Asks the delegate if a local video file can be deleted.
+
+| Parameter    | Description |
+| ---------    | ----------- |
+| `controller` | The controller object informing the delegate of this event |
+| `fileURL`    | The local URL for the file the request is made for |
+
+**Return Value**
+
+`true` if the file at `fileURL` could be deleted by the user, otherwise `false`.
+
+**Discussion**
+
+Returning `true` does not trigger file deletion, but a delete button will be made available to the user. File deletion can then be triggered by the user by tapping on the delete button.
+___
+
+```swift
+func videoPlayRecordController(_ controller: QEDVideoPlayRecordViewController, fileDeletionRequestedFor fileURL : URL)
+```
+Tells the delegate a file deletion has been requested for a local file.
+
+| Parameter    | Description |
+| ---------    | ----------- |
+| `controller` | The controller object informing the delegate of this event |
+| `fileURL`    | The local URL for the file that has been requested for deletion |
+
+**Discussion**
+
+It is up to your implementation to actually delete the file from the file system.
+
+After calling this method the controller will clear its reference to the reported `fileURL`
+
+### Video Recording
+
+```swift
+func videoPlayRecordController(_ controller: QEDVideoPlayRecordViewController, userRecordedFileAt fileURL : URL)
+```
+Tells the delegate the user has finished recording a new video.
+
+| Parameter    | Description |
+| ---------    | ----------- |
+| `controller` | The controller object informing the delegate of this event |
+| `fileURL`    | The local URL for the new video file recorded by the user |
+
+**Discussion**
+
+When this method is called, the user has ended recording a video file which is now available at `fileURL`. You must not delete this file as the controller has now switched to playback mode and expects the existence of the video file at `fileURL`
+
+You can choose to act on this request and trigger your logic for new videos, but be aware that the user can still trigger file deletion for the new video. It is recomended instead to handle new video logic once the user has requested to dismiss the controller. For more info on this, see `videoPlayRecordController(_:dismissalRequestWithNewRecordedFileAt:keepingFile)`
