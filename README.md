@@ -2,7 +2,7 @@
 
 The QED REST API provides an easy way to leverage blockchain technology attaching immutable timestamps to your files. 
 
-![QED Diagram](https://github.com/move-fast/qed-docs/blob/master/qed.png)
+![QED Diagram](https://github.com/buzztechno/qed-docs/blob/master/qed.png)
 
 
 ## Usage
