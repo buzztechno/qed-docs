@@ -81,7 +81,7 @@ curl -X GET \
     -H 'Content-Type: application/json'
 ```
 
-#### Output
+#### Output<a name="report-resource"></a>
 
 ```
 {
@@ -101,6 +101,30 @@ curl -X GET \
   }
 }
 ```
+
+### Filtering for a hash
+
+It is also possible to query for a list of app reports that represent a given hash. The `hash` parameter is required in order to permit access only to clients that hold a given file or know its corresponding hash.
+
+#### Endpoint
+
+```
+https://api.qed.digital/v1/reports/?hash=...
+```
+
+#### cURL Example 
+
+```
+curl -X GET \
+    https://api.qed.digital/v1/reports/?hash=af051c4d7a44a43459661b0943153d929f5370beacfeedc6cde6545fae981969 \
+    -H 'Authorization: app-token l1MttwRc4SJcuQwDabcDFF23noLjgEyUFmWZZZIgCVekwlOmBmGtDtaEvxJHBuM3' \
+    -H 'Content-Type: application/json'
+```
+
+#### Output
+
+A list of [Report resources](#report-resource)
+
 
 ### Transaction information<a name="transaction"></a>
 
