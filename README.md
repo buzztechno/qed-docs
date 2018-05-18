@@ -4,7 +4,7 @@ The QED REST API provides an easy way to leverage blockchain technology attachin
 
 ![QED Diagram](images/qed.png)
 
-For IOS we also provide an SDK wrapper around the API. [IOS QEDSDK](ios_sdk/README.md)
+For IOS we also provide an SDK wrapper around the API. [IOS QEDSDK](IOSQEDSDKImages/index.html)
 
 ## Usage
 

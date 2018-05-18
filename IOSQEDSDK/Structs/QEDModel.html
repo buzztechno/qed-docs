@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>QEDModel Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/QEDModel" class="dashAnchor"></a>
+    <a title="QEDModel Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">QEDSDK Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">QEDSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        QEDModel Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/QEDAPI.html">QEDAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDVideoPlayRecordViewController.html">QEDVideoPlayRecordViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDVideoPlayRecordViewController/SetupError.html">– SetupError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/QEDVideoPlayRecordViewControllerDelegate.html">QEDVideoPlayRecordViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/QEDFile.html">QEDFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDFile/ProofStatus.html">– ProofStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDModel.html">QEDModel</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>QEDModel</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">QEDModel</span></code></pre>
+
+                </div>
+              </div>
+            <p><code>QEDModel</code> provides a set of helper methods to aid on persisting a data model ( represented as an array of <code><a href="../Structs/QEDFile.html">QEDFile</a></code> instances).</p>
+
+<p>Usage of <code>QEDModel</code> is optional and is meant just as an aid to speed up your data source implementation.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Persisting%20and%20Retrieving%20from%20Local%20Storage"></a>
+                <a name="//apple_ref/swift/Section/Persisting and Retrieving from Local Storage" class="dashAnchor"></a>
+                <a href="#/Persisting%20and%20Retrieving%20from%20Local%20Storage">
+                  <h3 class="section-name">Persisting and Retrieving from Local Storage</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK8QEDModelV7persistySayAA7QEDFileVG10filesArray_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/persist(filesArray:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK8QEDModelV7persistySayAA7QEDFileVG10filesArray_tFZ">persist(filesArray:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Will persist a given array of <code><a href="../Structs/QEDFile.html">QEDFile</a></code> instances to <code>UserDefaults</code>.</p>
+
+<p>Normally you will call this method when the app goes to background, passing your in memory model array for persisting.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">persist</span><span class="p">(</span><span class="n">filesArray</span> <span class="nv">files</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/QEDFile.html">QEDFile</a></span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>files</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of <code><a href="../Structs/QEDFile.html">QEDFile</a></code> instances representing your data model to be persisted locally to <code>UserDefaults</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK8QEDModelV13loadFromStoreSayAA7QEDFileVGyFZ"></a>
+                    <a name="//apple_ref/swift/Method/loadFromStore()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK8QEDModelV13loadFromStoreSayAA7QEDFileVGyFZ">loadFromStore()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the locally persisted array of <code><a href="../Structs/QEDFile.html">QEDFile</a></code> instances.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">loadFromStore</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/QEDFile.html">QEDFile</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns the currently persisted array of <code><a href="../Structs/QEDFile.html">QEDFile</a></code> instances from <code>UserDefaults</code>
+If no array is persisted currently in <code>UserDefaults</code>, an empty array will be returned.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2018-05-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

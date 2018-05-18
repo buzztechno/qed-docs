@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>QEDVideoPlayRecordViewController Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/QEDVideoPlayRecordViewController" class="dashAnchor"></a>
+    <a title="QEDVideoPlayRecordViewController Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">QEDSDK Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">QEDSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        QEDVideoPlayRecordViewController Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/QEDAPI.html">QEDAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDVideoPlayRecordViewController.html">QEDVideoPlayRecordViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDVideoPlayRecordViewController/SetupError.html">– SetupError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/QEDVideoPlayRecordViewControllerDelegate.html">QEDVideoPlayRecordViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/QEDFile.html">QEDFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDFile/ProofStatus.html">– ProofStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDModel.html">QEDModel</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>QEDVideoPlayRecordViewController</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">QEDVideoPlayRecordViewController</span> <span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+
+                </div>
+              </div>
+            <p>A View Controller providing record and playback video functionality for locally stored video files.</p>
+
+<p>It will switch automatically between video playback and video recording modes depending on the internal value for the local stored video file.</p>
+
+<p>If a local video file is assigned, the controller will be in playback mode, otherwise in recording mode.</p>
+
+<p>If allowed by the <code><a href="../Protocols/QEDVideoPlayRecordViewControllerDelegate.html">QEDVideoPlayRecordViewControllerDelegate</a></code>, a user can trigger the deletion of the local stored video file. After deletion the controller will switch to recording mode automatically.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Types"></a>
+                <a name="//apple_ref/swift/Section/Types" class="dashAnchor"></a>
+                <a href="#/Types">
+                  <h3 class="section-name">Types</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK32QEDVideoPlayRecordViewControllerC10SetupErrorO"></a>
+                    <a name="//apple_ref/swift/Enum/SetupError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK32QEDVideoPlayRecordViewControllerC10SetupErrorO">SetupError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents an Error on the Setup process of the controller.</p>
+
+                        <a href="../Classes/QEDVideoPlayRecordViewController/SetupError.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">SetupError</span> <span class="p">:</span> <span class="kt">LocalizedError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initialization"></a>
+                <a name="//apple_ref/swift/Section/Initialization" class="dashAnchor"></a>
+                <a href="#/Initialization">
+                  <h3 class="section-name">Initialization</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK32QEDVideoPlayRecordViewControllerCAcA0bcdeF8Delegate_p8delegate_10Foundation3URLV9directoryAHSg04fileJ0Sb8autoplaytcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(delegate:directory:fileURL:autoplay:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK32QEDVideoPlayRecordViewControllerCAcA0bcdeF8Delegate_p8delegate_10Foundation3URLV9directoryAHSg04fileJ0Sb8autoplaytcfc">init(delegate:directory:fileURL:autoplay:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code>QEDVideoPlayRecordViewController</code> instance for presentation</p>
+
+<p>The instance provide both recording and playback of video content. It will switch automatically between video playback and video recording modes depending on the internal value of <code>fileURL</code>.</p>
+
+<p>When initialised with a valid <code>fileURL</code>, the controller will start on playback mode when presented and will play automatically if <code>autoplay == true</code>.</p>
+
+<p>If <code>fileURL == nil</code> on initialisation, the controller will start on recording mode when presented.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">delegate</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/QEDVideoPlayRecordViewControllerDelegate.html">QEDVideoPlayRecordViewControllerDelegate</a></span><span class="p">,</span> <span class="nv">directory</span> <span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">fileURL</span> <span class="p">:</span> <span class="kt">URL</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">autoplay</span> <span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delegate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>class</code> instance conforming to the <code><a href="../Protocols/QEDVideoPlayRecordViewControllerDelegate.html">QEDVideoPlayRecordViewControllerDelegate</a></code> protocol. The delegate is not retained</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>directory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A local file directory where to store the newly recorded video files</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An optional URL for a local video file. Defaults to <code>nil</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>autoplay</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An indication if the video should autoplay when initialised with an existing local video URL. Defaults to <code>false</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2018-05-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
