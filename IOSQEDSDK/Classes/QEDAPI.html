@@ -53,13 +53,13 @@
             <a href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/QEDFile.html">QEDFile</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/QEDFile/ProofStatus.html">– ProofStatus</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Structs/QEDModel.html">QEDModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDReport.html">QEDReport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDReport/ProofStatus.html">– ProofStatus</a>
               </li>
             </ul>
           </li>
@@ -76,6 +76,8 @@
                 </div>
               </div>
             <p>The <code>QEDAPI</code> provides a wrapper class on the <a href="http://docs.qed.digital"><em>QED REST API</em></a>.</p>
+
+<p>It uses the <code><a href="../Structs/QEDReport.html">QEDReport</a></code> struct to represent files/reports for certification.</p>
 
           </section>
           <section class="section task-group-section">
@@ -108,7 +110,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ReportHandler</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="../Structs/QEDFile.html">QEDFile</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ReportHandler</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="../Structs/QEDReport.html">QEDReport</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -124,7 +126,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p><code>nil</code> if request failed, otherwise a <code><a href="../Structs/QEDFile.html">QEDFile</a></code> instance updated based on API response data.</p>
+                                  <p><code>nil</code> if request failed, otherwise a <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instance updated based on API response data.</p>
                                 </div>
                               </td>
                             </tr>
@@ -280,9 +282,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK6QEDAPIC10sendReportyAA7QEDFileV3for_yAFSg_s5Error_pSgtc10completiontFZ"></a>
-                    <a name="//apple_ref/swift/Method/sendReport(for:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK6QEDAPIC10sendReportyAA7QEDFileV3for_yAFSg_s5Error_pSgtc10completiontFZ">sendReport(for:completion:)</a>
+                    <a name="/s:6QEDSDK6QEDAPIC4sendyAA9QEDReportV_yAFSg_s5Error_pSgtc10completiontFZ"></a>
+                    <a name="//apple_ref/swift/Method/send(_:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK6QEDAPIC4sendyAA9QEDReportV_yAFSg_s5Error_pSgtc10completiontFZ">send(_:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -290,18 +292,18 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Will issue a request to the backend (for initial submission or updates if previously reported) for a notarizing report of the given <code>file</code></p>
+                        <p>Will issue a request to the backend (for initial submission or updates if previously reported) for a notarizing report of a file represented by a given <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instance</p>
 
-<p>After posting a report for a <code>file</code> for the first time, a blockchain proof is initiated.</p>
+<p>After posting a report for a <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instance for the first time, a blockchain proof is initiated.</p>
 
-<p>The server will respond with the updated report including blockchain transaction details. In most cases the report status will be <code><a href="../Structs/QEDFile/ProofStatus.html#/s:6QEDSDK7QEDFileV11ProofStatusO7pendingA2EmF">QEDFile.ProofStatus.pending</a></code> when posting for the first time</p>
+<p>The server will respond with the updated report including blockchain transaction details. In most cases the report status will be <code><a href="../Structs/QEDReport/ProofStatus.html#/s:6QEDSDK9QEDReportV11ProofStatusO7pendingA2EmF">QEDReport.ProofStatus.pending</a></code> when posting for the first time</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">sendReport</span><span class="p">(</span><span class="k">for</span> <span class="nv">file</span> <span class="p">:</span> <span class="kt"><a href="../Structs/QEDFile.html">QEDFile</a></span><span class="p">,</span> <span class="nv">completion</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC13ReportHandlera">ReportHandler</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="n">_</span> <span class="nv">report</span> <span class="p">:</span> <span class="kt"><a href="../Structs/QEDReport.html">QEDReport</a></span><span class="p">,</span> <span class="nv">completion</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC13ReportHandlera">ReportHandler</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -312,12 +314,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>file</em>
+                                <em>report</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The <code><a href="../Structs/QEDFile.html">QEDFile</a></code> representing the file content to be notarized</p>
+                                  <p>The <code><a href="../Structs/QEDReport.html">QEDReport</a></code> representing the file content to be notarized</p>
                                 </div>
                               </td>
                             </tr>
@@ -342,9 +344,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK6QEDAPIC9getReportyAA7QEDFileV3for_yAFSg_s5Error_pSgtc10completiontFZ"></a>
-                    <a name="//apple_ref/swift/Method/getReport(for:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK6QEDAPIC9getReportyAA7QEDFileV3for_yAFSg_s5Error_pSgtc10completiontFZ">getReport(for:completion:)</a>
+                    <a name="/s:6QEDSDK6QEDAPIC6updateyAA9QEDReportV_yAFSg_s5Error_pSgtc10completiontFZ"></a>
+                    <a name="//apple_ref/swift/Method/update(_:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK6QEDAPIC6updateyAA9QEDReportV_yAFSg_s5Error_pSgtc10completiontFZ">update(_:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -352,14 +354,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Will get the current report data for a given <code>file</code> from the backend.</p>
+                        <p>Will get the update report data for a given <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instance from the backend.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">getReport</span><span class="p">(</span><span class="k">for</span> <span class="nv">file</span> <span class="p">:</span> <span class="kt"><a href="../Structs/QEDFile.html">QEDFile</a></span><span class="p">,</span> <span class="nv">completion</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC13ReportHandlera">ReportHandler</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="n">_</span> <span class="nv">report</span> <span class="p">:</span> <span class="kt"><a href="../Structs/QEDReport.html">QEDReport</a></span><span class="p">,</span> <span class="nv">completion</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC13ReportHandlera">ReportHandler</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -370,12 +372,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>file</em>
+                                <em>report</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The <code><a href="../Structs/QEDFile.html">QEDFile</a></code> representing the file content to be updated from backend</p>
+                                  <p>The <code><a href="../Structs/QEDReport.html">QEDReport</a></code> representing the file content to be updated from backend</p>
                                 </div>
                               </td>
                             </tr>
@@ -400,9 +402,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK6QEDAPIC11generatePDFyAA7QEDFileV3for_ySb_s5Error_pSgtc10completiontFZ"></a>
+                    <a name="/s:6QEDSDK6QEDAPIC11generatePDFyAA9QEDReportV3for_ySb_s5Error_pSgtc10completiontFZ"></a>
                     <a name="//apple_ref/swift/Method/generatePDF(for:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK6QEDAPIC11generatePDFyAA7QEDFileV3for_ySb_s5Error_pSgtc10completiontFZ">generatePDF(for:completion:)</a>
+                    <a class="token" href="#/s:6QEDSDK6QEDAPIC11generatePDFyAA9QEDReportV3for_ySb_s5Error_pSgtc10completiontFZ">generatePDF(for:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -410,10 +412,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Will reqeust the generation and download of the PDF document for a given <code><a href="../Structs/QEDFile.html">QEDFile</a></code> instance.</p>
+                        <p>Will reqeust the generation and download of the PDF document for a given <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instance.</p>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    <p>The <code>file</code>&lsquo;s <code>QEDFile.poofStatus</code> must be <code>QEDFile.ProofStatus.certified</code>.</p>
+    <p>The <code>report</code>&lsquo;s <code>QEDReport.poofStatus</code> must be <code>QEDReport.ProofStatus.certified</code>.</p>
 
 </div>
 
@@ -422,7 +424,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">generatePDF</span><span class="p">(</span><span class="k">for</span> <span class="nv">file</span> <span class="p">:</span> <span class="kt"><a href="../Structs/QEDFile.html">QEDFile</a></span><span class="p">,</span> <span class="nv">completion</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC14SuccessHandlera">SuccessHandler</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">generatePDF</span><span class="p">(</span><span class="k">for</span> <span class="nv">report</span> <span class="p">:</span> <span class="kt"><a href="../Structs/QEDReport.html">QEDReport</a></span><span class="p">,</span> <span class="nv">completion</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC14SuccessHandlera">SuccessHandler</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -433,12 +435,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>file</em>
+                                <em>report</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The <code><a href="../Structs/QEDFile.html">QEDFile</a></code> instance for which a PDF certificate is being requested.</p>
+                                  <p>The <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instance for which a PDF certificate is being requested.</p>
                                 </div>
                               </td>
                             </tr>
