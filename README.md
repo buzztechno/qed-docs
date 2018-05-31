@@ -84,7 +84,7 @@ curl -X GET \
 
 #### Output<a name="report-resource"></a>
 
-For an explanation of the `tx` object please jump to the [transaction ressource](#transaction) section.
+For an explanation of the `tx` object please jump to the [transaction resource](#transaction) section.
 
 ```
 {
