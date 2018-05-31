@@ -84,6 +84,8 @@ curl -X GET \
 
 #### Output<a name="report-resource"></a>
 
+For an explanation of the `tx` object please jump to the [transaction ressource](#transaction) section.
+
 ```
 {
   "slug": "U1FKSif",
@@ -105,7 +107,7 @@ curl -X GET \
 
 ### Filtering for a hash
 
-It is also possible to query for a list of app reports that represent a given hash. The `hash` parameter is required in order to permit access only to clients that hold a given file or know its corresponding hash.
+It is also possible to query for a list of app reports that represent a given file hash. The `hash` parameter is required in order to permit access only to clients that hold a given file or know its corresponding hash.
 
 #### Endpoint
 
@@ -127,14 +129,14 @@ curl -X GET \
 A list of [Report resources](#report-resource)
 
 
-### Transaction information<a name="transaction"></a>
+### Transaction ressource<a name="transaction"></a>
 
 | Key | Type | Description | Example |
 | --- | ---- | ----------- | ------- |
 | `hash` | `string` | Deterministic hash of the transaction which can be used to access details of the transaction. | "af051c4d..." |
 |`data`|`JSON`|Blockchain-dependent data representation|*{"id": "fdcbb4e...", "paging_token": "38112560532193280", "hash": "fdcbb4e...", "ledger": 8873772, "created_at": "2018-05-09T13:20:53Z", "source_account": "GAS5AL...", "source_account_sequence": "36978014856151081", "fee_paid": 100, "operation_count": 1, ...}*|
 |`block_height`|`integer`|Block number|8872466|
-|`block_time`|`ISO 8601`|Validation time of the block which is represents the time the proof has been ultimately persisted|"2018-05-09T11:32:03Z"|
+|`block_time`|`ISO 8601`|Validation time of the block which represents the time when the proof has been ultimately persisted|"2018-05-09T11:32:03Z"|
 |`explorer_url`|`URL`|Points to a blockchain explorer transaction detail page |[https://testnet.steexp.com/tx/642b07917...8cc4123a970b6](https://testnet.steexp.com/tx/642b0791738b1d202cb2e6d3c7fd811310cf0d990baba1a2b418cc4123a970b6)|
 |`network_name`|`string`|High level name of the concrete blockchain network| "Stellar Testnet" |
 |`network_id`|`string` or `integer`|Internal identifier for the network which lies within the scope of the concrete blockchain family. It can take multiple forms depending on the blockchain.|"cee0302d59844d32b...a37abedf28ecd472"|
