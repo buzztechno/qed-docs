@@ -175,11 +175,11 @@ curl -X POST \
 |`download_hint`|*translatable text*|"The file can be downloaded here"|
 |`verify_hint`|*translatable text*|"To verify the file manually you can use this tool to generate a checksum and compare to the hash stored on the blockchain"|
 |`no_file`|*translatable text*|"The file was stored outside of the scope of the service. The creator is responsible for providing the original data for evidence.|
-|`i18n_blockchain_data`|*translatable text*|"Blockchain data"|
-|`i18n_block_number`|*translatable text*|"Block no."|
-|`i18n_block_date`|*translatable text*|"Block date"|
-|`i18n_file_hash`|*translatable text*|"File hash"|
-|`i18n_sender_account`|*translatable text*|"Sender account"|
-|`i18n_network_id`|*translatable text*|"Network ID"|
-|`i18n_network_name`|*translatable text*|"Network name"|
-|`i18n_transaction_id`|*translatable text*|"Transaction ID"|
+|`blockchain_data`|*translatable text*|"Blockchain data"|
+|`block_number`|*translatable text*|"Block no."|
+|`block_date`|*translatable text*|"Block date"|
+|`file_hash`|*translatable text*|"File hash"|
+|`sender_account`|*translatable text*|"Sender account"|
+|`network_id`|*translatable text*|"Network ID"|
+|`network_name`|*translatable text*|"Network name"|
+|`transaction_id`|*translatable text*|"Transaction ID"|
