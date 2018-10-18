@@ -34,10 +34,16 @@
                 <a href="../Classes/QEDAPI.html">QEDAPI</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/QEDVideoPlayRecordViewController.html">QEDVideoPlayRecordViewController</a>
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController.html">QEDMediaCaptureAndPlayViewController</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/QEDVideoPlayRecordViewController/SetupError.html">– SetupError</a>
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController/DismissReason.html">– DismissReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController/SetupError.html">– SetupError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController/MediaType.html">– MediaType</a>
               </li>
             </ul>
           </li>
@@ -45,13 +51,19 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/QEDVideoPlayRecordViewControllerDelegate.html">QEDVideoPlayRecordViewControllerDelegate</a>
+                <a href="../Protocols/QEDMediaCaptureAndPlayViewControllerDelegate.html">QEDMediaCaptureAndPlayViewControllerDelegate</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/QEDFile.html">QEDFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDFile/FileType.html">– FileType</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Structs/QEDModel.html">QEDModel</a>
               </li>
@@ -75,7 +87,7 @@
 
                 </div>
               </div>
-            <p>A <code>QEDReport</code> represents a data file locally stored on the user device that needs to be time stamped and notarised on the blockchain</p>
+            <p>A <code>QEDReport</code> represents a group of files stored that can be time stamped and notarised by the backend</p>
 
           </section>
           <section class="section task-group-section">
@@ -101,7 +113,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The curernt blockchain certificate state for a <code><a href="../Structs/QEDReport.html">QEDReport</a></code></p>
+                        <p>The curernt backend certificate state for a <code><a href="../Structs/QEDReport.html">QEDReport</a></code></p>
 
                         <a href="../Structs/QEDReport/ProofStatus.html" class="slightly-smaller">See more</a>
                       </div>
@@ -130,9 +142,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK9QEDReportVACSg10Foundation3URLV4with_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(with:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK9QEDReportVACSg10Foundation3URLV4with_tcfc">init(with:)</a>
+                    <a name="/s:6QEDSDK9QEDReportV4nameACSS_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV4nameACSS_tcfc">init(name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -140,44 +152,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates a <code>QEDReport</code> instance for a local file URL.</p>
-<div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    <p>The <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4nameSSvp">name</a></code>, <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV3extSSvp">ext</a></code> and <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV9dateTaken10Foundation4DateVvp">dateTaken</a></code> will be inferred from the file at <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV7fileURL10Foundation0D0Vvp">fileURL</a></code>.</p>
+                        <p>Creates a <code>QEDReport</code> instance from scratch with a given name</p>
 
-</div>
+<ul>
+<li><p>name: A String representing the name of the report</p></li>
+</ul>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">with</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>fileURL</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The local URL for the file to represent in the <code>QEDReport</code> instance.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A new <code>QEDReport</code> instance representing the file at <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV7fileURL10Foundation0D0Vvp">fileURL</a></code> or <code>nil</code> if the file does not exist.</p>
+                        <p>A new <code>QEDReport</code> instance with the given <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4nameSSvp">name</a></code> and a <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV7created10Foundation4DateVvp">created</a></code> date set to the current time. The initial value of <code>status</code> is <code>unrequested</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -185,86 +177,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK9QEDReportVACSS8withName_SS9extension10Foundation4DateV9dateTakentcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(withName:extension:dateTaken:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK9QEDReportVACSS8withName_SS9extension10Foundation4DateV9dateTakentcfc">init(withName:extension:dateTaken:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates a <code>QEDReport</code> instance with the provided <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4nameSSvp">name</a></code>, <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV3extSSvp">ext</a></code> and <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV9dateTaken10Foundation4DateVvp">dateTaken</a></code> for the local file to represent.</p>
-
-<p>The <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV7fileURL10Foundation0D0Vvp">fileURL</a></code> will be inferred from the default file storage <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV12qedDirectory10Foundation3URLVvpZ">qedDirectory</a></code>, the <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4nameSSvp">name</a></code> and the extension(<code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV3extSSvp">ext</a></code>).</p>
-<div class="aside aside-important">
-    <p class="aside-title">Important</p>
-    The <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV9dateTaken10Foundation4DateVvp">dateTaken</a></code> is just used as metadata and will be different that the timestamp on the blockchain certificate when reported.
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">withName</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kd">extension</span> <span class="nv">ext</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">dateTaken</span><span class="p">:</span> <span class="kt">Date</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>name</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A string representing the name of the local file without extension</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>ext</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A string representing the extension of the local file</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>dateTaken</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A <code>Date</code> instance representing the date the file was created</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6QEDSDK9QEDReportVACSgs10DictionaryVySSypG22fromQEDAPIResponseDict_10Foundation3URLVSg04fileH0tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(fromQEDAPIResponseDict:fileURL:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK9QEDReportVACSgs10DictionaryVySSypG22fromQEDAPIResponseDict_10Foundation3URLVSg04fileH0tcfc">init(fromQEDAPIResponseDict:fileURL:)</a>
+                    <a name="/s:6QEDSDK9QEDReportV22fromQEDAPIResponseDictACSgSDySSypG_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(fromQEDAPIResponseDict:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV22fromQEDAPIResponseDictACSgSDySSypG_tcfc">init(fromQEDAPIResponseDict:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -274,19 +189,12 @@
                       <div class="abstract">
                         <p>Creates a <code>QEDReport</code> instance from a Dictionary from API response.</p>
 
-<p>If <em>fileURL</em> parameter is <code>nil</code>, the instance <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV7fileURL10Foundation0D0Vvp">fileURL</a></code> attribute will be inferred from the default file storage <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV12qedDirectory10Foundation3URLVvpZ">qedDirectory</a></code> and the calculated instance <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4nameSSvp">name</a></code> and extension(<code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV3extSSvp">ext</a></code>).</p>
-<div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    If you manage local file storage on a separate location, you should pass the <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV7fileURL10Foundation0D0Vvp">fileURL</a></code> indicating the local URL for the <code>QEDReport</code> represented file if existing. You can also update the <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV7fileURL10Foundation0D0Vvp">fileURL</a></code> attribute at a later time.
-
-</div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">fromQEDAPIResponseDict</span> <span class="nv">dict</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">Any</span><span class="p">],</span> <span class="nv">fileURL</span> <span class="p">:</span> <span class="kt">URL</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">fromQEDAPIResponseDict</span> <span class="nv">dict</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
@@ -306,24 +214,12 @@
                                 </div>
                               </td>
                             </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>fileURL</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>An optional URL indicating the local storage location of the file represented in the report.</p>
-                                </div>
-                              </td>
-                            </tr>
                           </tbody>
                         </table>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A new <code>QEDReport</code> instance based on <code>dict</code>. It must include <strong>name</strong>, <strong>slug</strong>, <strong>hash</strong>, <strong>dateTaken</strong> and <strong>status</strong> values as a minimum otherwise the instantiation will fail and return <code>nil</code>.</p>
+                        <p>A new <code>QEDReport</code> instance based on <code>dict</code>. It must include <strong>name</strong>, <strong>slug</strong>, <strong>hash</strong>, <strong>created</strong> and <strong>status</strong> values as a minimum otherwise the instantiation will fail and return <code>nil</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -339,37 +235,6 @@
                 </a>
               </div>
               <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6QEDSDK9QEDReportV12qedDirectory10Foundation3URLVvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/qedDirectory" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK9QEDReportV12qedDirectory10Foundation3URLVvpZ">qedDirectory</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Default storage directory for the <code>QEDReport</code> represented files in the app&rsquo;s bundle.</p>
-
-<p>You can use this directory to store the files you want to represent as <code>QEDReport</code>&lsquo;s for notarisation.</p>
-
-<p>If you use this default directory, then you can create <code>QEDReport</code> instances using <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportVACSS8withName_SS9extension10Foundation4DateV9dateTakentcfc">init(withName:extension:dateTaken:)</a></code>and the local <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV7fileURL10Foundation0D0Vvp">fileURL</a></code> location will be assumed to be on the root level of this directory.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">qedDirectory</span><span class="p">:</span> <span class="kt">URL</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -411,10 +276,10 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/File%20Attributes%20and%20Metadata"></a>
-                <a name="//apple_ref/swift/Section/File Attributes and Metadata" class="dashAnchor"></a>
-                <a href="#/File%20Attributes%20and%20Metadata">
-                  <h3 class="section-name">File Attributes and Metadata</h3>
+                <a name="/Report%20Attributes%20and%20Metadata"></a>
+                <a name="//apple_ref/swift/Section/Report Attributes and Metadata" class="dashAnchor"></a>
+                <a href="#/Report%20Attributes%20and%20Metadata">
+                  <h3 class="section-name">Report Attributes and Metadata</h3>
                 </a>
               </div>
               <ul>
@@ -431,7 +296,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name for the represented file without extension</p>
+                        <p>The name for the stored report</p>
 
                       </div>
                       <div class="declaration">
@@ -448,9 +313,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK9QEDReportV3extSSvp"></a>
-                    <a name="//apple_ref/swift/Property/ext" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK9QEDReportV3extSSvp">ext</a>
+                    <a name="/s:6QEDSDK9QEDReportV7created10Foundation4DateVvp"></a>
+                    <a name="//apple_ref/swift/Property/created" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV7created10Foundation4DateVvp">created</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -458,34 +323,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A string representing the type of file (i.e the extension).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">ext</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6QEDSDK9QEDReportV9dateTaken10Foundation4DateVvp"></a>
-                    <a name="//apple_ref/swift/Property/dateTaken" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK9QEDReportV9dateTaken10Foundation4DateVvp">dateTaken</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The client date when the file was created.</p>
+                        <p>The client date when the report was created.</p>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     Used only as metadata.
@@ -502,7 +340,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dateTaken</span><span class="p">:</span> <span class="kt">Date</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">created</span><span class="p">:</span> <span class="kt">Date</span></code></pre>
 
                         </div>
                       </div>
@@ -522,17 +360,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An optional string with a note about the file.</p>
-<div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    Used only as metadata.
-
-</div>
-<div class="aside aside-important">
-    <p class="aside-title">Important</p>
-    Will differ from the timestamp on the blockchain certificate.
-
-</div>
+                        <p>An optional string with a note about the report.</p>
 
                       </div>
                       <div class="declaration">
@@ -540,6 +368,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">note</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV5filesSayAA7QEDFileVGvp"></a>
+                    <a name="//apple_ref/swift/Property/files" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV5filesSayAA7QEDFileVGvp">files</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The array of associated files to the report</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">files</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/QEDFile.html">QEDFile</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -577,7 +432,7 @@
 
 </div>
 
-<p>When using the <code><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC4sendyAA9QEDReportV_yAFSg_s5Error_pSgtc10completiontFZ">QEDAPI.send(_:completion:)</a></code> method to submit reports, this attribute gets updated based on the response from server.</p>
+<p>When using the <code><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC4send_10completionyAA9QEDReportV_yAGSg_s5Error_pSgtctFZ">QEDAPI.send(_:completion:)</a></code> method to submit reports, this attribute gets updated based on the response from server.</p>
 
                       </div>
                       <div class="declaration">
@@ -649,10 +504,10 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Managing%20the%20Associated%20File%20Hash"></a>
-                <a name="//apple_ref/swift/Section/Managing the Associated File Hash" class="dashAnchor"></a>
-                <a href="#/Managing%20the%20Associated%20File%20Hash">
-                  <h3 class="section-name">Managing the Associated File Hash</h3>
+                <a name="/Managing%20the%20Report%20Hash"></a>
+                <a name="//apple_ref/swift/Section/Managing the Report Hash" class="dashAnchor"></a>
+                <a href="#/Managing%20the%20Report%20Hash">
+                  <h3 class="section-name">Managing the Report Hash</h3>
                 </a>
               </div>
               <ul>
@@ -669,14 +524,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The hash to be stored on the blockchain as proof of existence of the associated file.</p>
+                        <p>The hash to be stored on the blockchain as proof of existence of the associated files.</p>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    This value must not be <code>nil</code> when issuing a report with the <code><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC4sendyAA9QEDReportV_yAFSg_s5Error_pSgtc10completiontFZ">QEDAPI.send(_:completion:)</a></code> method
+    This value must not be <code>nil</code> when issuing a report with the <code><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC4send_10completionyAA9QEDReportV_yAGSg_s5Error_pSgtctFZ">QEDAPI.send(_:completion:)</a></code> method
 
 </div>
 
-<p>It is recommended to use <em>SHA256</em> to calculate the hash, and the convenience method <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV18withCalculatedHashACyF">withCalculatedHash()</a></code> will take care of this for you.</p>
+<p>Use the convenience method <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV18withCalculatedHashACyF">withCalculatedHash()</a></code> to calculate the hash of the report.</p>
 
                       </div>
                       <div class="declaration">
@@ -703,7 +558,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns a <code>QEDReport</code> instance with the <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4hashSSSgvp">hash</a></code> calculated from the file at <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV17localFileLocation10Foundation3URLVSgvp">localFileLocation</a></code>.</p>
+                        <p>Returns a <code>QEDReport</code> instance with the <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4hashSSSgvp">hash</a></code> calculated from the hash of the associated files.</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    Will calculate the hash of the associated files that are missing it.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -716,109 +576,8 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Returns a copy of the current instance where the <em>SHA256</em> <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4hashSSSgvp">hash</a></code> has been calculated from the data in file at <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV17localFileLocation10Foundation3URLVSgvp">localFileLocation</a></code>.
-If there is no local file (i.e. <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV17localFileLocation10Foundation3URLVSgvp">localFileLocation</a></code> <code>== nil</code>) then the same unaffected instance is returned (i.e. <code>self</code>)</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Managing%20the%20Local%20File%20Storage"></a>
-                <a name="//apple_ref/swift/Section/Managing the Local File Storage" class="dashAnchor"></a>
-                <a href="#/Managing%20the%20Local%20File%20Storage">
-                  <h3 class="section-name">Managing the Local File Storage</h3>
-                </a>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6QEDSDK9QEDReportV7fileURL10Foundation0D0Vvp"></a>
-                    <a name="//apple_ref/swift/Property/fileURL" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK9QEDReportV7fileURL10Foundation0D0Vvp">fileURL</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The URL where the file is meant to be locally stored.</p>
-
-<p>There is no guarantee that a file actually exists at this URL. For existance check use <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV17localFileLocation10Foundation3URLVSgvp">localFileLocation</a></code></p>
-<div class="aside aside-seealso">
-    <p class="aside-title">Seealso</p>
-    <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV17localFileLocation10Foundation3URLVSgvp">localFileLocation</a></code>
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6QEDSDK9QEDReportV17localFileLocation10Foundation3URLVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/localFileLocation" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK9QEDReportV17localFileLocation10Foundation3URLVSgvp">localFileLocation</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The actual location url for the local file.</p>
-
-<p>It has the same value as <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV7fileURL10Foundation0D0Vvp">fileURL</a></code> or <code>nil</code> if the file at <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV7fileURL10Foundation0D0Vvp">fileURL</a></code> does not exist.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">localFileLocation</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6QEDSDK9QEDReportV12hasLocalFileSbvp"></a>
-                    <a name="//apple_ref/swift/Property/hasLocalFile" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK9QEDReportV12hasLocalFileSbvp">hasLocalFile</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates if the instance references and existing local file at <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV7fileURL10Foundation0D0Vvp">fileURL</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hasLocalFile</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
+                        <p>Returns a copy of the current instance where the <em>SHA256</em> <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4hashSSSgvp">hash</a></code> has been calculated from the hash of the associated files that have a hash value.
+If there is no associated files with a hash value then the same unaffected instance is returned (i.e. <code>self</code>)</p>
                       </div>
                     </section>
                   </div>
@@ -914,9 +673,9 @@ If there is no local file (i.e. <code><a href="../Structs/QEDReport.html#/s:6QED
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK9QEDReportV24dictionaryRepresentations10DictionaryVyS2SGyF"></a>
+                    <a name="/s:6QEDSDK9QEDReportV24dictionaryRepresentationSDySSs11AnyHashableVGyF"></a>
                     <a name="//apple_ref/swift/Method/dictionaryRepresentation()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK9QEDReportV24dictionaryRepresentations10DictionaryVyS2SGyF">dictionaryRepresentation()</a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV24dictionaryRepresentationSDySSs11AnyHashableVGyF">dictionaryRepresentation()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -926,14 +685,14 @@ If there is no local file (i.e. <code><a href="../Structs/QEDReport.html#/s:6QED
                       <div class="abstract">
                         <p>Returns a dictionary representation of the instance.</p>
 
-<p>The keys are <code>String</code> instances as described on <a href="http://docs.qed.digital"><em>QED REST API</em></a>. Values are <code>String</code> instances derived from the respective instance attributes.</p>
+<p>The keys are <code>String</code> instances as described on <a href="http://docs.qed.digital"><em>QED REST API</em></a>. Values are <code>AnyHashable</code> instances derived from the respective instance attributes.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dictionaryRepresentation</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dictionaryRepresentation</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">AnyHashable</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -958,9 +717,9 @@ If there is no local file (i.e. <code><a href="../Structs/QEDReport.html#/s:6QED
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK9QEDReportV5mergeA2C4with_tF"></a>
+                    <a name="/s:6QEDSDK9QEDReportV5merge4withA2C_tF"></a>
                     <a name="//apple_ref/swift/Method/merge(with:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK9QEDReportV5mergeA2C4with_tF">merge(with:)</a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV5merge4withA2C_tF">merge(with:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1001,9 +760,9 @@ All the properties of the provided <code>QEDReport</code> instance that are non 
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK9QEDReportV1loiSbAC_ACtFZ"></a>
+                    <a name="/s:6QEDSDK9QEDReportV1loiySbAC_ACtFZ"></a>
                     <a name="//apple_ref/swift/Method/&lt;(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK9QEDReportV1loiSbAC_ACtFZ">&lt;(_:_:)</a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV1loiySbAC_ACtFZ">&lt;(_:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1013,7 +772,7 @@ All the properties of the provided <code>QEDReport</code> instance that are non 
                       <div class="abstract">
                         <p>Returns a Boolean value indicating whether the value of the first argument is less than that of the second argument.</p>
 
-<p><code>&lt;</code> is purely based on the same comparison executed on the <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV9dateTaken10Foundation4DateVvp">dateTaken</a></code> attribute of the instances.</p>
+<p><code>&lt;</code> is purely based on the same comparison executed on the <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV7created10Foundation4DateVvp">created</a></code> attribute of the instances.</p>
 
                       </div>
                       <div class="declaration">
@@ -1030,9 +789,9 @@ All the properties of the provided <code>QEDReport</code> instance that are non 
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK9QEDReportV2eeoiSbAC_ACtFZ"></a>
+                    <a name="/s:6QEDSDK9QEDReportV2eeoiySbAC_ACtFZ"></a>
                     <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK9QEDReportV2eeoiSbAC_ACtFZ">==(_:_:)</a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV2eeoiySbAC_ACtFZ">==(_:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1044,7 +803,7 @@ All the properties of the provided <code>QEDReport</code> instance that are non 
 
 <p>Two <code>QEDReport</code> instances are considered equal if they have the same <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4slugSSSgvp">slug</a></code> (i.e. They represent the same report on the backend).</p>
 
-<p>If one or both <code>QEDReport</code>&lsquo;s are missing the <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4slugSSSgvp">slug</a></code>, they are considered equal if they have the same <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV9dateTaken10Foundation4DateVvp">dateTaken</a></code>. (i.e. The instance before reporting and the instance created from report response are considered equal)</p>
+<p>If one or both <code>QEDReport</code>&lsquo;s are missing the <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4slugSSSgvp">slug</a></code>, they are considered equal if they have the same <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4nameSSvp">name</a></code>. (i.e. The instance before reporting and the instance created from report response are considered equal)</p>
 
                       </div>
                       <div class="declaration">
@@ -1063,7 +822,7 @@ All the properties of the provided <code>QEDReport</code> instance that are non 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2018-05-31)</p>
+          <p>&copy; 2018 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2018-10-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

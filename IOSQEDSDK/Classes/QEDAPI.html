@@ -34,10 +34,16 @@
                 <a href="../Classes/QEDAPI.html">QEDAPI</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/QEDVideoPlayRecordViewController.html">QEDVideoPlayRecordViewController</a>
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController.html">QEDMediaCaptureAndPlayViewController</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/QEDVideoPlayRecordViewController/SetupError.html">– SetupError</a>
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController/DismissReason.html">– DismissReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController/SetupError.html">– SetupError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController/MediaType.html">– MediaType</a>
               </li>
             </ul>
           </li>
@@ -45,13 +51,19 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/QEDVideoPlayRecordViewControllerDelegate.html">QEDVideoPlayRecordViewControllerDelegate</a>
+                <a href="../Protocols/QEDMediaCaptureAndPlayViewControllerDelegate.html">QEDMediaCaptureAndPlayViewControllerDelegate</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/QEDFile.html">QEDFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDFile/FileType.html">– FileType</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Structs/QEDModel.html">QEDModel</a>
               </li>
@@ -77,7 +89,7 @@
               </div>
             <p>The <code>QEDAPI</code> provides a wrapper class on the <a href="http://docs.qed.digital"><em>QED REST API</em></a>.</p>
 
-<p>It uses the <code><a href="../Structs/QEDReport.html">QEDReport</a></code> struct to represent files/reports for certification.</p>
+<p>It uses the <code><a href="../Structs/QEDReport.html">QEDReport</a></code> and <code><a href="../Structs/QEDFile.html">QEDFile</a></code> structs to represent reports and files for certification.</p>
 
           </section>
           <section class="section task-group-section">
@@ -121,7 +133,7 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>file</em>
+                                <em>report</em>
                                 </code>
                               </td>
                               <td>
@@ -220,9 +232,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK6QEDAPIC5setupySS4with_tFZ"></a>
+                    <a name="/s:6QEDSDK6QEDAPIC5setup4withySS_tFZ"></a>
                     <a name="//apple_ref/swift/Method/setup(with:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK6QEDAPIC5setupySS4with_tFZ">setup(with:)</a>
+                    <a class="token" href="#/s:6QEDSDK6QEDAPIC5setup4withySS_tFZ">setup(with:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -282,9 +294,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK6QEDAPIC4sendyAA9QEDReportV_yAFSg_s5Error_pSgtc10completiontFZ"></a>
+                    <a name="/s:6QEDSDK6QEDAPIC4send_10completionyAA9QEDReportV_yAGSg_s5Error_pSgtctFZ"></a>
                     <a name="//apple_ref/swift/Method/send(_:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK6QEDAPIC4sendyAA9QEDReportV_yAFSg_s5Error_pSgtc10completiontFZ">send(_:completion:)</a>
+                    <a class="token" href="#/s:6QEDSDK6QEDAPIC4send_10completionyAA9QEDReportV_yAGSg_s5Error_pSgtctFZ">send(_:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -292,11 +304,11 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Will issue a request to the backend (for initial submission or updates if previously reported) for a notarizing report of a file represented by a given <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instance</p>
+                        <p>Will issue a request to the backend (for initial submission or updates if previously reported) for a notarizing report of files represented by a given <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instance</p>
 
 <p>After posting a report for a <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instance for the first time, a blockchain proof is initiated.</p>
 
-<p>The server will respond with the updated report including blockchain transaction details. In most cases the report status will be <code><a href="../Structs/QEDReport/ProofStatus.html#/s:6QEDSDK9QEDReportV11ProofStatusO7pendingA2EmF">QEDReport.ProofStatus.pending</a></code> when posting for the first time</p>
+<p>The server will respond with the updated report including blockchain transaction details. In most cases the report status will be <code><a href="../Structs/QEDReport/ProofStatus.html#/s:6QEDSDK9QEDReportV11ProofStatusO7pendingyA2EmF">QEDReport.ProofStatus.pending</a></code> when posting for the first time</p>
 
                       </div>
                       <div class="declaration">
@@ -319,7 +331,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The <code><a href="../Structs/QEDReport.html">QEDReport</a></code> representing the file content to be notarized</p>
+                                  <p>The <code><a href="../Structs/QEDReport.html">QEDReport</a></code> representing the files to be notarized</p>
                                 </div>
                               </td>
                             </tr>
@@ -344,9 +356,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK6QEDAPIC6updateyAA9QEDReportV_yAFSg_s5Error_pSgtc10completiontFZ"></a>
+                    <a name="/s:6QEDSDK6QEDAPIC6update_10completionyAA9QEDReportV_yAGSg_s5Error_pSgtctFZ"></a>
                     <a name="//apple_ref/swift/Method/update(_:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK6QEDAPIC6updateyAA9QEDReportV_yAFSg_s5Error_pSgtc10completiontFZ">update(_:completion:)</a>
+                    <a class="token" href="#/s:6QEDSDK6QEDAPIC6update_10completionyAA9QEDReportV_yAGSg_s5Error_pSgtctFZ">update(_:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -377,7 +389,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The <code><a href="../Structs/QEDReport.html">QEDReport</a></code> representing the file content to be updated from backend</p>
+                                  <p>The <code><a href="../Structs/QEDReport.html">QEDReport</a></code> representing a notarization report to be updated from backend</p>
                                 </div>
                               </td>
                             </tr>
@@ -402,9 +414,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK6QEDAPIC11generatePDFyAA9QEDReportV3for_ySb_s5Error_pSgtc10completiontFZ"></a>
+                    <a name="/s:6QEDSDK6QEDAPIC11generatePDF3for10completionyAA9QEDReportV_ySb_s5Error_pSgtctFZ"></a>
                     <a name="//apple_ref/swift/Method/generatePDF(for:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK6QEDAPIC11generatePDFyAA9QEDReportV3for_ySb_s5Error_pSgtc10completiontFZ">generatePDF(for:completion:)</a>
+                    <a class="token" href="#/s:6QEDSDK6QEDAPIC11generatePDF3for10completionyAA9QEDReportV_ySb_s5Error_pSgtctFZ">generatePDF(for:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -467,7 +479,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2018-05-31)</p>
+          <p>&copy; 2018 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2018-10-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

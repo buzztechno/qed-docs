@@ -33,10 +33,16 @@
                 <a href="Classes/QEDAPI.html">QEDAPI</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/QEDVideoPlayRecordViewController.html">QEDVideoPlayRecordViewController</a>
+                <a href="Classes/QEDMediaCaptureAndPlayViewController.html">QEDMediaCaptureAndPlayViewController</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/QEDVideoPlayRecordViewController/SetupError.html">– SetupError</a>
+                <a href="Classes/QEDMediaCaptureAndPlayViewController/DismissReason.html">– DismissReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/QEDMediaCaptureAndPlayViewController/SetupError.html">– SetupError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/QEDMediaCaptureAndPlayViewController/MediaType.html">– MediaType</a>
               </li>
             </ul>
           </li>
@@ -44,13 +50,19 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/QEDVideoPlayRecordViewControllerDelegate.html">QEDVideoPlayRecordViewControllerDelegate</a>
+                <a href="Protocols/QEDMediaCaptureAndPlayViewControllerDelegate.html">QEDMediaCaptureAndPlayViewControllerDelegate</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/QEDFile.html">QEDFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/QEDFile/FileType.html">– FileType</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Structs/QEDModel.html">QEDModel</a>
               </li>
@@ -73,13 +85,14 @@
 <p>The IOS <em>QEDSDK</em> provides a set of convenience instance types aimed to ease and shorten the development time for the usage of the <a href="http://docs.qed.digital"><em>QED REST API</em></a>.</p>
 
 <p>The main type is the <code><a href="Classes/QEDAPI.html">QEDAPI</a></code> class, which is a wrapper over the functionality of the <a href="http://docs.qed.digital"><em>QED REST API</em></a>.
-The <code><a href="Structs/QEDReport.html">QEDReport</a></code> defines the representation of a data file to be reported to and notarized by the <a href="http://docs.qed.digital"><em>QED REST API</em></a>. The <code><a href="Classes/QEDAPI.html">QEDAPI</a></code> class receives and returns <q>file report</q> representations using the <code><a href="Structs/QEDReport.html">QEDReport</a></code> struct.</p>
+The <code><a href="Structs/QEDFile.html">QEDFile</a></code> defines the representation of a data file to be reported to and notarized by the <a href="http://docs.qed.digital"><em>QED REST API</em></a>. 
+The <code><a href="Structs/QEDReport.html">QEDReport</a></code> defines a representation of a group of <code>QEDFiles</code> that want to be joinly notarized as a common report. The <code><a href="Classes/QEDAPI.html">QEDAPI</a></code> class receives and returns <q>report</q> representations using the <code><a href="Structs/QEDReport.html">QEDReport</a></code> struct.</p>
 
 <p>Two more convenience types are provided which are optional to use:</p>
 
 <ul>
 <li>The <code><a href="Structs/QEDModel.html">QEDModel</a></code> provides a set of convenience methods to aid on persisting and retrieving a data model to/from local storage.</li>
-<li>The <code><a href="Classes/QEDVideoPlayRecordViewController.html">QEDVideoPlayRecordViewController</a></code> provides in a simple interface, the necessary functionality to play and record videos. You can use this view controller out of the box if your application is meant for video capturing for notarization.</li>
+<li>The <code><a href="Classes/QEDMediaCaptureAndPlayViewController.html">QEDMediaCaptureAndPlayViewController</a></code> provides in a simple interface, the necessary functionality to play and capture videos and photos. You can use this view controller out of the box if your application is meant for media capturing for notarization.</li>
 </ul>
 <h1 id='getting-started' class='heading'>Getting Started</h1>
 <h2 id='add-the-sdk-to-your-project' class='heading'>Add the SDK to your project</h2>
@@ -129,10 +142,14 @@ The <code><a href="Structs/QEDReport.html">QEDReport</a></code> defines the repr
 <li><p>Copy the lines below and paste them into your AppDelegate’s <code>application(_:didFinishLaunchingWithOptions:)</code> method</p>
 <pre class="highlight swift"><code><span class="kt">QEDAPI</span><span class="o">.</span><span class="nf">setup</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="s">"YOUR_API_KEY"</span><span class="p">)</span>
 </code></pre></li>
-<li><p>Prepare a <code><a href="Structs/QEDReport.html">QEDReport</a></code> representing a local data file to be reported and notarized. Create a <code><a href="Structs/QEDReport.html">QEDReport</a></code> instance. You can instantiate from the local URL for an existing file.</p>
-<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">report</span> <span class="o">=</span> <span class="kt">QEDReport</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">localFileURL</span><span class="p">)</span><span class="o">!</span>
+<li><p>Prepare a <code><a href="Structs/QEDFile.html">QEDFile</a></code> representing a local data file to be reported and notarized. Create a <code><a href="Structs/QEDFile.html">QEDFile</a></code> instance. You can instantiate with the name and extension of a file that you have locally stored on the <code><a href="Structs/QEDFile.html#/s:6QEDSDK7QEDFileV12qedDirectory10Foundation3URLVvpZ">QEDFile.qedDirectory</a></code> root url.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">file</span> <span class="o">=</span> <span class="kt">QEDFile</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"FILE_NAME"</span><span class="p">,</span> <span class="nv">extension</span><span class="p">:</span> <span class="s">"FILE_EXTENSION"</span><span class="p">,</span> <span class="nv">dateTaken</span><span class="p">:</span> <span class="kt">Date</span><span class="p">())</span><span class="o">!</span>
 </code></pre></li>
-<li><p>Calculate the <em>SHA256</em> hash of the content file if not done yet.</p>
+<li><p>Prepare a <code><a href="Structs/QEDReport.html">QEDReport</a></code> representing a group of files to be reported and notarized. Create a <code><a href="Structs/QEDReport.html">QEDReport</a></code> instance. You can instantiate with the name and add the files associated with the report.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">report</span> <span class="o">=</span> <span class="kt">QEDReport</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"REPORT_NAME"</span><span class="p">)</span><span class="o">!</span>
+<span class="n">report</span><span class="o">.</span><span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="n">file</span><span class="p">]</span>
+</code></pre></li>
+<li><p>Calculate the <em>SHA256</em> hash of the report if not done yet.</p>
 <pre class="highlight swift"><code><span class="n">report</span> <span class="o">=</span> <span class="n">report</span><span class="o">.</span><span class="nf">withCalculatedHash</span><span class="p">()</span>
 </code></pre></li>
 <li><p>Using the <code><a href="Classes/QEDAPI.html">QEDAPI</a></code> class methods to interact with the <a href="http://docs.qed.digital"><em>QED REST API</em></a> server, issue a report to the backend for notarization</p>
@@ -149,7 +166,7 @@ The <code><a href="Structs/QEDReport.html">QEDReport</a></code> defines the repr
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></li>
-<li><p>You can check periodically for status updates until report is <code><a href="Structs/QEDReport/ProofStatus.html#/s:6QEDSDK9QEDReportV11ProofStatusO9confirmedA2EmF">QEDReport.ProofStatus.confirmed</a></code></p>
+<li><p>You can check periodically for status updates until report is <code><a href="Structs/QEDReport/ProofStatus.html#/s:6QEDSDK9QEDReportV11ProofStatusO9confirmedyA2EmF">QEDReport.ProofStatus.confirmed</a></code></p>
 <pre class="highlight swift"><code><span class="kt">QEDAPI</span><span class="o">.</span><span class="nf">update</span><span class="p">(</span><span class="n">report</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">updatedReport</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
     <span class="c1">// Make sure to perform UI update related actions on main thread</span>
     <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">async</span> <span class="p">{</span>
@@ -164,7 +181,7 @@ The <code><a href="Structs/QEDReport.html">QEDReport</a></code> defines the repr
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></li>
-<li><p>Once the <code><a href="Structs/QEDReport.html">QEDReport</a></code> status is <code><a href="Structs/QEDReport/ProofStatus.html#/s:6QEDSDK9QEDReportV11ProofStatusO9confirmedA2EmF">QEDReport.ProofStatus.confirmed</a></code>, you can request a PDF certificate from backend</p>
+<li><p>Once the <code><a href="Structs/QEDReport.html">QEDReport</a></code> status is <code><a href="Structs/QEDReport/ProofStatus.html#/s:6QEDSDK9QEDReportV11ProofStatusO9confirmedyA2EmF">QEDReport.ProofStatus.confirmed</a></code>, you can request a PDF certificate from backend</p>
 <pre class="highlight swift"><code><span class="kt">QEDAPI</span><span class="o">.</span><span class="nf">generatePDF</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">report</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
     <span class="c1">// Make sure to perform UI update related actions on main thread</span>
     <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">async</span> <span class="p">{</span>
@@ -184,7 +201,7 @@ The <code><a href="Structs/QEDReport.html">QEDReport</a></code> defines the repr
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2018-05-31)</p>
+          <p>&copy; 2018 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2018-10-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
