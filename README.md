@@ -84,6 +84,8 @@ curl -X GET \
 
 #### Output<a name="report-resource"></a>
 
+For an explanation of the `tx` object please jump to the [transaction resource](#transaction) section.
+
 ```
 {
   "slug": "U1FKSif",
@@ -105,7 +107,7 @@ curl -X GET \
 
 ### Filtering for a hash
 
-It is also possible to query for a list of app reports that represent a given hash. The `hash` parameter is required in order to permit access only to clients that hold a given file or know its corresponding hash.
+It is also possible to query for a list of app reports that represent a given file hash. The `hash` parameter is required in order to permit access only to clients that hold a given file or know its corresponding hash.
 
 #### Endpoint
 
@@ -127,14 +129,14 @@ curl -X GET \
 A list of [Report resources](#report-resource)
 
 
-### Transaction information<a name="transaction"></a>
+### Transaction ressource<a name="transaction"></a>
 
 | Key | Type | Description | Example |
 | --- | ---- | ----------- | ------- |
 | `hash` | `string` | Deterministic hash of the transaction which can be used to access details of the transaction. | "af051c4d..." |
 |`data`|`JSON`|Blockchain-dependent data representation|*{"id": "fdcbb4e...", "paging_token": "38112560532193280", "hash": "fdcbb4e...", "ledger": 8873772, "created_at": "2018-05-09T13:20:53Z", "source_account": "GAS5AL...", "source_account_sequence": "36978014856151081", "fee_paid": 100, "operation_count": 1, ...}*|
 |`block_height`|`integer`|Block number|8872466|
-|`block_time`|`ISO 8601`|Validation time of the block which is represents the time the proof has been ultimately persisted|"2018-05-09T11:32:03Z"|
+|`block_time`|`ISO 8601`|Validation time of the block which represents the time when the proof has been ultimately persisted|"2018-05-09T11:32:03Z"|
 |`explorer_url`|`URL`|Points to a blockchain explorer transaction detail page |[https://testnet.steexp.com/tx/642b07917...8cc4123a970b6](https://testnet.steexp.com/tx/642b0791738b1d202cb2e6d3c7fd811310cf0d990baba1a2b418cc4123a970b6)|
 |`network_name`|`string`|High level name of the concrete blockchain network| "Stellar Testnet" |
 |`network_id`|`string` or `integer`|Internal identifier for the network which lies within the scope of the concrete blockchain family. It can take multiple forms depending on the blockchain.|"cee0302d59844d32b...a37abedf28ecd472"|
@@ -173,11 +175,11 @@ curl -X POST \
 |`download_hint`|*translatable text*|"The file can be downloaded here"|
 |`verify_hint`|*translatable text*|"To verify the file manually you can use this tool to generate a checksum and compare to the hash stored on the blockchain"|
 |`no_file`|*translatable text*|"The file was stored outside of the scope of the service. The creator is responsible for providing the original data for evidence.|
-|`i18n_blockchain_data`|*translatable text*|"Blockchain data"|
-|`i18n_block_number`|*translatable text*|"Block no."|
-|`i18n_block_date`|*translatable text*|"Block date"|
-|`i18n_file_hash`|*translatable text*|"File hash"|
-|`i18n_sender_account`|*translatable text*|"Sender account"|
-|`i18n_network_id`|*translatable text*|"Network ID"|
-|`i18n_network_name`|*translatable text*|"Network name"|
-|`i18n_transaction_id`|*translatable text*|"Transaction ID"|
+|`blockchain_data`|*translatable text*|"Blockchain data"|
+|`block_number`|*translatable text*|"Block no."|
+|`block_date`|*translatable text*|"Block date"|
+|`file_hash`|*translatable text*|"File hash"|
+|`sender_account`|*translatable text*|"Sender account"|
+|`network_id`|*translatable text*|"Network ID"|
+|`network_name`|*translatable text*|"Network name"|
+|`transaction_id`|*translatable text*|"Transaction ID"|
