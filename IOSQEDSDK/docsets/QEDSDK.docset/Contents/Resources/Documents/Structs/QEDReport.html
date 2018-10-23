@@ -169,7 +169,7 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A new <code>QEDReport</code> instance with the given <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4nameSSvp">name</a></code> and a <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV7created10Foundation4DateVvp">created</a></code> date set to the current time. The initial value of <code>status</code> is <code>unrequested</code>.</p>
+                        <p>A new <code>QEDReport</code> instance with the given <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4nameSSvp">name</a></code> and a <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV7created10Foundation4DateVvp">created</a></code> date set to the current time. The initial value of <code>status</code> is <code>undefined</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -449,9 +449,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK9QEDReportV19isSynchedWithServerSbvp"></a>
-                    <a name="//apple_ref/swift/Property/isSynchedWithServer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK9QEDReportV19isSynchedWithServerSbvp">isSynchedWithServer</a>
+                    <a name="/s:6QEDSDK9QEDReportV7hasSlugSbvp"></a>
+                    <a name="//apple_ref/swift/Property/hasSlug" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV7hasSlugSbvp">hasSlug</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -459,14 +459,69 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates if the reported has already been submitted to the server. (i.e. if it has a <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4slugSSSgvp">slug</a></code>)</p>
+                        <p>Indicates if the reported has a slug, i.e. if already been created in the server.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isSynchedWithServer</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hasSlug</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV22certificationRequestedSbvp"></a>
+                    <a name="//apple_ref/swift/Property/certificationRequested" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV22certificationRequestedSbvp">certificationRequested</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates if the report certification to the server has already been requested</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">certificationRequested</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV27certificationCanBeRequestedSbvp"></a>
+                    <a name="//apple_ref/swift/Property/certificationCanBeRequested" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV27certificationCanBeRequestedSbvp">certificationCanBeRequested</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates if a certification process can be started for this report.
+i.e. current status is <code>undefined</code>, it has no <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4slugSSSgvp">slug</a></code>, a certificate has not yet been requested and has files associated.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">certificationCanBeRequested</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -822,7 +877,7 @@ All the properties of the provided <code>QEDReport</code> instance that are non 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2018-10-18)</p>
+          <p>&copy; 2018 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2018-10-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
