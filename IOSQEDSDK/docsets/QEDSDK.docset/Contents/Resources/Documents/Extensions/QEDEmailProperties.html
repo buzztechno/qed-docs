@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>QEDModel Structure Reference</title>
+    <title>QEDEmailProperties Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/QEDModel" class="dashAnchor"></a>
-    <a title="QEDModel Structure Reference"></a>
+    <a name="//apple_ref/swift/Extension/QEDEmailProperties" class="dashAnchor"></a>
+    <a title="QEDEmailProperties Extension Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">QEDSDK Docs</a> (100% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">QEDSDK Reference</a>
         <img id="carat" src="../img/carat.png" />
-        QEDModel Structure Reference
+        QEDEmailProperties Extension Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -91,34 +91,64 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>QEDModel</h1>
+            <h1>QEDEmailProperties</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">QEDModel</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">QEDEmailProperties</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
 
                 </div>
               </div>
-            <p><code>QEDModel</code> provides a set of helper methods to aid on persisting a data model ( represented as an array of <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instances and its associated <code><a href="../Structs/QEDFile.html">QEDFile</a></code> instances).</p>
-
-<p>Usage of <code>QEDModel</code> is optional and is meant just as an aid to speed up your data source implementation.</p>
-
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK18QEDEmailPropertiesV2eeoiySbAC_ACtFZ"></a>
+                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK18QEDEmailPropertiesV2eeoiySbAC_ACtFZ">==(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a Boolean value indicating whether two values are equal.</p>
+
+<p>Two <code>QEDEmailProperties</code> instances are considered equal if they have the same <code>email</code> and the same mailist options including values</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">QEDEmailProperties</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">QEDEmailProperties</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
               <div class="task-name-container">
-                <a name="/Persisting%20and%20Retrieving%20from%20Local%20Storage"></a>
-                <a name="//apple_ref/swift/Section/Persisting and Retrieving from Local Storage" class="dashAnchor"></a>
-                <a href="#/Persisting%20and%20Retrieving%20from%20Local%20Storage">
-                  <h3 class="section-name">Persisting and Retrieving from Local Storage</h3>
+                <a name="/Conformance%20to%20%60Equatable%60%20protocol"></a>
+                <a name="//apple_ref/swift/Section/Conformance to `Equatable` protocol" class="dashAnchor"></a>
+                <a href="#/Conformance%20to%20%60Equatable%60%20protocol">
+                  <h3 class="section-name">Conformance to `Equatable` protocol</h3>
                 </a>
               </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK8QEDModelV7persist7reportsySayAA9QEDReportVG_tFZ"></a>
-                    <a name="//apple_ref/swift/Method/persist(reports:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK8QEDModelV7persist7reportsySayAA9QEDReportVG_tFZ">persist(reports:)</a>
+                    <a name="/s:6QEDSDK18QEDEmailPropertiesV8MailListV"></a>
+                    <a name="//apple_ref/swift/Extension/MailList" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK18QEDEmailPropertiesV8MailListV">MailList</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -126,69 +156,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Will persist a given array of <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instances to <code>UserDefaults</code>.</p>
-
-<p>Normally you will call this method when the app goes to background, passing your in memory model array for persisting.</p>
-
+                        
+                        <a href="../Extensions/QEDEmailProperties/MailList.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">persist</span><span class="p">(</span><span class="nv">reports</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/QEDReport.html">QEDReport</a></span><span class="p">])</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">QEDEmailProperties</span><span class="o">.</span><span class="kt">MailList</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>reports</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>An array of <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instances representing your data model to be persisted locally to <code>UserDefaults</code></p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6QEDSDK8QEDModelV13loadFromStoreSayAA9QEDReportVGyFZ"></a>
-                    <a name="//apple_ref/swift/Method/loadFromStore()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK8QEDModelV13loadFromStoreSayAA9QEDReportVGyFZ">loadFromStore()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the locally persisted array of <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instances.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">loadFromStore</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/QEDReport.html">QEDReport</a></span><span class="p">]</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Returns the currently persisted array of <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instances from <code>UserDefaults</code>
-If no array is persisted currently in <code>UserDefaults</code>, an empty array will be returned.</p>
                       </div>
                     </section>
                   </div>

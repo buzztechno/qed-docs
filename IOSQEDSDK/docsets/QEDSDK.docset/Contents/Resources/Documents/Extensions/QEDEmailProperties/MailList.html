@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>DismissReason Enumeration Reference</title>
+    <title>MailList Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/DismissReason" class="dashAnchor"></a>
-    <a title="DismissReason Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Extension/MailList" class="dashAnchor"></a>
+    <a title="MailList Extension Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../../index.html">QEDSDK Docs</a> (100% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../../index.html">QEDSDK Reference</a>
         <img id="carat" src="../../img/carat.png" />
-        DismissReason Enumeration Reference
+        MailList Extension Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -91,32 +91,24 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>DismissReason</h1>
+            <h1>MailList</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DismissReason</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">QEDEmailProperties</span><span class="o">.</span><span class="kt">MailList</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
 
                 </div>
               </div>
-            <p>Represent the reason for dismissal request</p>
-
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Enumeration%20Cases"></a>
-                <a name="//apple_ref/swift/Section/Enumeration Cases" class="dashAnchor"></a>
-                <a href="#/Enumeration%20Cases">
-                  <h3 class="section-name">Enumeration Cases</h3>
-                </a>
-              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK36QEDMediaCaptureAndPlayViewControllerC13DismissReasonO4saveyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/save" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK36QEDMediaCaptureAndPlayViewControllerC13DismissReasonO4saveyA2EmF">save</a>
+                    <a name="/s:6QEDSDK18QEDEmailPropertiesV8MailListV2eeoiySbAE_AEtFZ"></a>
+                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK18QEDEmailPropertiesV8MailListV2eeoiySbAE_AEtFZ">==(_:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -124,41 +116,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>User has tapped on the save video recording button</p>
+                        <p>Returns a Boolean value indicating whether two values are equal.</p>
+
+<p>Two <code>MailList</code> instances are considered equal if they have the same options including values</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">save</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6QEDSDK36QEDMediaCaptureAndPlayViewControllerC13DismissReasonO5closeyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/close" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK36QEDMediaCaptureAndPlayViewControllerC13DismissReasonO5closeyA2EmF">close</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>User has tapped on the controller close button</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">close</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">QEDEmailProperties</span><span class="o">.</span><span class="kt">MailList</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">QEDEmailProperties</span><span class="o">.</span><span class="kt">MailList</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>

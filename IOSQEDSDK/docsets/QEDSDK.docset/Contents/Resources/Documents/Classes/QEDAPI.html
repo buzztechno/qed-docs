@@ -48,6 +48,17 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/QEDEmailProperties.html">QEDEmailProperties</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/QEDEmailProperties/MailList.html">– MailList</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -294,9 +305,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK6QEDAPIC4send_10completionyAA9QEDReportV_yAGSg_s5Error_pSgtctFZ"></a>
-                    <a name="//apple_ref/swift/Method/send(_:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK6QEDAPIC4send_10completionyAA9QEDReportV_yAGSg_s5Error_pSgtctFZ">send(_:completion:)</a>
+                    <a name="/s:6QEDSDK6QEDAPIC4send_2in10completionyAA9QEDReportV_SSyAHSg_s5Error_pSgtctFZ"></a>
+                    <a name="//apple_ref/swift/Method/send(_:in:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK6QEDAPIC4send_2in10completionyAA9QEDReportV_SSyAHSg_s5Error_pSgtctFZ">send(_:in:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -315,7 +326,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="n">_</span> <span class="nv">report</span> <span class="p">:</span> <span class="kt"><a href="../Structs/QEDReport.html">QEDReport</a></span><span class="p">,</span> <span class="nv">completion</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC13ReportHandlera">ReportHandler</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="n">_</span> <span class="nv">report</span> <span class="p">:</span> <span class="kt"><a href="../Structs/QEDReport.html">QEDReport</a></span><span class="p">,</span> <span class="k">in</span> <span class="nv">language</span> <span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"en"</span><span class="p">,</span> <span class="nv">completion</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC13ReportHandlera">ReportHandler</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -414,9 +425,43 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK6QEDAPIC11generatePDF3for10completionyAA9QEDReportV_ySb_s5Error_pSgtctFZ"></a>
-                    <a name="//apple_ref/swift/Method/generatePDF(for:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK6QEDAPIC11generatePDF3for10completionyAA9QEDReportV_ySb_s5Error_pSgtctFZ">generatePDF(for:completion:)</a>
+                    <a name="/s:6QEDSDK6QEDAPIC17forceStatusUpdate3for10completionyAA9QEDReportV_yAHSg_s5Error_pSgtctFZ"></a>
+                    <a name="//apple_ref/swift/Method/forceStatusUpdate(for:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK6QEDAPIC17forceStatusUpdate3for10completionyAA9QEDReportV_yAHSg_s5Error_pSgtctFZ">forceStatusUpdate(for:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Will get a forced update of the certification status for a given <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instance from the backend.</p>
+
+<ul>
+<li>report: The <code><a href="../Structs/QEDReport.html">QEDReport</a></code> representing a notarization report to be updated from backend</li>
+<li>completion: The <code><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC13ReportHandlera">ReportHandler</a></code> block to call when the request is complete. This handler is not called on the main thread</li>
+</ul>
+
+<p>A Force status update will make the backed update the certification directly from the blockchain if it is not already <code>confirmed</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">forceStatusUpdate</span><span class="p">(</span><span class="k">for</span> <span class="nv">report</span> <span class="p">:</span> <span class="kt"><a href="../Structs/QEDReport.html">QEDReport</a></span><span class="p">,</span> <span class="nv">completion</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC13ReportHandlera">ReportHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK6QEDAPIC11generatePDF3for2in10completionyAA9QEDReportV_SSySb_s5Error_pSgtctFZ"></a>
+                    <a name="//apple_ref/swift/Method/generatePDF(for:in:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK6QEDAPIC11generatePDF3for2in10completionyAA9QEDReportV_SSySb_s5Error_pSgtctFZ">generatePDF(for:in:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -436,7 +481,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">generatePDF</span><span class="p">(</span><span class="k">for</span> <span class="nv">report</span> <span class="p">:</span> <span class="kt"><a href="../Structs/QEDReport.html">QEDReport</a></span><span class="p">,</span> <span class="nv">completion</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC14SuccessHandlera">SuccessHandler</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">generatePDF</span><span class="p">(</span><span class="k">for</span> <span class="nv">report</span> <span class="p">:</span> <span class="kt"><a href="../Structs/QEDReport.html">QEDReport</a></span><span class="p">,</span> <span class="k">in</span> <span class="nv">language</span> <span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"en"</span><span class="p">,</span> <span class="nv">completion</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC14SuccessHandlera">SuccessHandler</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -453,6 +498,18 @@
                               <td>
                                 <div>
                                   <p>The <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instance for which a PDF certificate is being requested.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>language</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>String</code> representing the languate the PDF is prefered</p>
                                 </div>
                               </td>
                             </tr>
@@ -479,7 +536,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2018-10-23)</p>
+          <p>&copy; 2018 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2018-11-01)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
