@@ -48,17 +48,6 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Extensions.html">Extensions</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Extensions/QEDEmailProperties.html">QEDEmailProperties</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/QEDEmailProperties/MailList.html">– MailList</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -165,10 +154,6 @@
                       <div class="abstract">
                         <p>Creates a <code>QEDReport</code> instance from scratch with a given name</p>
 
-<ul>
-<li><p>name: A String representing the name of the report</p></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -177,6 +162,25 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A String representing the name of the report</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -443,7 +447,7 @@
 
 </div>
 
-<p>When using the <code>QEDAPI.send(_:completion:)</code> method to submit reports, this attribute gets updated based on the response from server.</p>
+<p>When using the <code><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC4send_2in10completionyAA9QEDReportV_SSyAHSg_s5Error_pSgtctFZ">QEDAPI.send(_:in:completion:)</a></code> method to submit reports, this attribute gets updated based on the response from server.</p>
 
                       </div>
                       <div class="declaration">
@@ -478,61 +482,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hasSlug</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6QEDSDK9QEDReportV26certificationRequestedDate10Foundation0E0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/certificationRequestedDate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK9QEDReportV26certificationRequestedDate10Foundation0E0VSgvp">certificationRequestedDate</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates the date that the report certification to the server was last requested, needed to manage retry</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">certificationRequestedDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6QEDSDK9QEDReportV27certificationCanBeRequestedSbvp"></a>
-                    <a name="//apple_ref/swift/Property/certificationCanBeRequested" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK9QEDReportV27certificationCanBeRequestedSbvp">certificationCanBeRequested</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates if a certification process can be started for this report.
-i.e. current status is <code>undefined</code>, it has no <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4slugSSSgvp">slug</a></code>, a certificate has not yet been requested and has files associated.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">certificationCanBeRequested</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -593,7 +542,7 @@ i.e. current status is <code>undefined</code>, it has no <code><a href="../Struc
                         <p>The hash to be stored on the blockchain as proof of existence of the associated files.</p>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    This value must not be <code>nil</code> when issuing a report with the <code>QEDAPI.send(_:completion:)</code> method
+    This value must not be <code>nil</code> when issuing a report with the <code><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC4send_2in10completionyAA9QEDReportV_SSyAHSg_s5Error_pSgtctFZ">QEDAPI.send(_:in:completion:)</a></code> method
 
 </div>
 
@@ -869,7 +818,9 @@ All the properties of the provided <code>QEDReport</code> instance that are non 
 
 <p>Two <code>QEDReport</code> instances are considered equal if they have the same <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4slugSSSgvp">slug</a></code> (i.e. They represent the same report on the backend).</p>
 
-<p>If one or both <code>QEDReport</code>&lsquo;s are missing the <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4slugSSSgvp">slug</a></code>, they are considered equal if they have the same <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4nameSSvp">name</a></code>. (i.e. The instance before reporting and the instance created from report response are considered equal)</p>
+<p>If one or both <code>QEDReport</code>&lsquo;s are missing the <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4slugSSSgvp">slug</a></code>, they are considered equal if they have the same <code>id</code>.</p>
+
+<p>If one or both <code>QEDReport</code>&rsquo;s are missing the <code>id</code>, they are considered equal if they have the same <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4nameSSvp">name</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -888,7 +839,7 @@ All the properties of the provided <code>QEDReport</code> instance that are non 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2018-11-01)</p>
+          <p>&copy; 2018 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2018-11-22)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
