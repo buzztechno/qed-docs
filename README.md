@@ -8,13 +8,15 @@ For IOS we also provide an SDK wrapper around the API. [IOS QEDSDK](IOSQEDSDK/in
 
 ## Usage
 
-Each HTTP request has to be authenticated by an API key. In order to use the QED REST API, you must obtain an API Key. Please get in contact: mail@qed.digital.
+### Get your API Key
+
+Each HTTP request has to be authenticated by an **API key**. In order to use the `QED REST API`, you must obtain an **API Key**. Please get in contact: [mail@qed.digital](mailto:mail@qed.digital).
 
 The API key is submitted via the `Authorization` header as `app-token <API_KEY>`, i.e.
 ```
 curl -X POST \
     https://api.qed.digital/...
-    -H 'Authorization: app-token l1MttwRc4SJcuQwDabcDFF23noLjgEyUFmWZZZIgCVekwlOmBmGtDtaEvxJHBuM3'
+    -H 'Authorization: app-token <API_KEY>'
 ```
 
 ### Storing a hash to the blockchain
@@ -37,7 +39,7 @@ An array of 32 bytes can be stored to the blockchain. In order to make the hash 
 ```
 curl -X POST \
     https://api.qed.digital/v1/reports/ \
-    -H 'Authorization: app-token l1MttwRc4SJcuQwDabcDFF23noLjgEyUFmWZZZIgCVekwlOmBmGtDtaEvxJHBuM3' \
+    -H 'Authorization: app-token <API_KEY>' \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "My new appartement", // an arbitrary title as string,
@@ -78,7 +80,7 @@ For a more detailed description of the transaction resource, please jump to the 
 ```
 curl -X GET \
     https://api.qed.digital/v1/reports/U1FKSif \
-    -H 'Authorization: app-token l1MttwRc4SJcuQwDabcDFF23noLjgEyUFmWZZZIgCVekwlOmBmGtDtaEvxJHBuM3' \
+    -H 'Authorization: app-token <API_KEY>' \
     -H 'Content-Type: application/json'
 ```
 
@@ -120,7 +122,7 @@ https://api.qed.digital/v1/reports/?hash=...
 ```
 curl -X GET \
     https://api.qed.digital/v1/reports/?hash=af051c4d7a44a43459661b0943153d929f5370beacfeedc6cde6545fae981969 \
-    -H 'Authorization: app-token l1MttwRc4SJcuQwDabcDFF23noLjgEyUFmWZZZIgCVekwlOmBmGtDtaEvxJHBuM3' \
+    -H 'Authorization: app-token <API_KEY>' \
     -H 'Content-Type: application/json'
 ```
 
@@ -155,7 +157,7 @@ Generate a custom proof of existence certificate PDF.
 ```
 curl -X POST \
     https://api.qed.digital/v1/reports/<slug>/pdf/
-    -H 'Authorization: app-token l1MttwRc4SJcuQwDabcDFF23noLjgEyUFmWZZZIgCVekwlOmBmGtDtaEvxJHBuM3' \
+    -H 'Authorization: app-token <API_KEY>' \
     -d '{
         "i18n": {...} // See below for full set of i18n options
         "address": "Immoweb s.a., Avenue Général Dumonceau, 56, B-1190 Forest, Belgium" // Address field
