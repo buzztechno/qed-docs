@@ -29,11 +29,15 @@ An array of 32 bytes can be stored to the blockchain. In order to make the hash 
 
 #### Data
 
-|Key|Type|Optional|Description|Example|
+|Key|Type|Required|Description|Example|
 |---|----|--------|-------|----|
-| ``name`` | `string` | x | an arbitrary title | "My new appartement"
-| `note` | `string` | x | an arbitrary note | "This is so amazing."
-| `hash` | `string` | - | hex encoded string representing a byte array (maximum bytes 32) | "646412deadbeef8812"
+| `hash` | `string` | x | hex encoded string representing a byte array (maximum bytes 32) | "646412deadbeef8812" |
+| `provable_files` | `ProvableFile` object | x | A list of files represented by their meta data. Can be empty. |
+| `original_created_at` | `iso datetime` | x | Timestamp when the report is bundled by the client application |
+| `name` | `string` | - | an arbitrary title | "My new appartement" |
+| `note` | `string` | - | an arbitrary note | "This is so amazing." |
+| `email` | `string` | - | email field (should be set, if the issuer wants to be notified |
+| `meta_data` | `JSON string` | - | additional meta data (i.e. address, geo location, references) |
 
 #### cURL example
 ```
@@ -44,7 +48,27 @@ curl -X POST \
     -d '{
         "name": "My new appartement", // an arbitrary title as string,
         "note": "This is so amazing.", // an arbitrary note as string,
-        "hash": "deadbeef" // hex encoded string representing a byte array (maximum bytes 32)
+        "hash": "deadbeef", // hex encoded string representing a byte array (maximum bytes 32)
+        "email": "tenant@example.com",  // an email as string
+        "original_created_at": "2018-10-24T13:58:57.344Z",
+        "provable_files": [{
+             "hash": "968b0ef...", // SHA256 hash representation of the file binary
+             "file_name": "my-file.jpg"
+        }],
+        "meta_data": {   // optional meta data
+             "address": {
+                "street": "Teststr.",
+                "number": "1234",
+                ...
+             },
+             "also": {
+                "arbitrary_data": {
+                    "status": "possible",
+                    "id": 27563
+                } 
+             }
+          }
+        }
     }'
 ```
 
@@ -61,6 +85,14 @@ For a more detailed description of the transaction resource, please jump to the 
   "name": "My new appartement",
   "note": "This is so amazing",
   "hash": "deadbeef",
+  "provable_files": [{
+     "slug": "BZzRxnX",
+     "hash": "968b0ef...", // SHA256 hash representation of the file binary
+     "file_name": "my-file.jpg"
+  }],
+  "meta_data": {
+     "address": // ...
+  },
   "tx": {
      "hash": "af051c4d7a44a43459661b0943153d929f5370beacfeedc6cde6545fae981969" // deterministic hash of the transaction which can be used to access details of the transaction
      // More transaction details as soon as the transaction has been successfully processed by the blockchain network
@@ -68,6 +100,19 @@ For a more detailed description of the transaction resource, please jump to the 
 }
 ```
 
+### `ProvableFile` objects
+
+`ProvableFile` objects represent the files being contained in the timestamped QED proof. Files can be kept secretly, but should be added as references of their original content. 
+Keeping the file hashes as records ensures, that a report's file timestamp can be proven as long as all other report file hashes can be taken into the equation, even if all other files have been lost.
+
+
+```
+{
+    "slug": "BZzRxnX", //
+    "hash": "968b0ef546556914662ed0376c4db10a67a03ed137c3168662edb0bab7104ed0",
+    "file_name": "my-file.jpg"
+}
+```
 
 ### Retrieving the report status
 
@@ -95,6 +140,11 @@ For an explanation of the `tx` object please jump to the [transaction resource](
   "name": "My new appartement",
   "note": "This is so amazing",
   "hash": "deadbeef",
+  "provable_files": [{
+     "slug": "BZzRxnX",
+     "hash": "968b0ef...", // SHA256 hash representation of the file binary
+     "file_name": "my-file.jpg"
+  }],
   "tx": {
      "hash": "af051c4d7a44a43459661b0943153d929f5370beacfeedc6cde6545fae981969"
      "data": {...}, // generic JSON object (Blockchain implementation specific)
@@ -103,6 +153,19 @@ For an explanation of the `tx` object please jump to the [transaction resource](
      "explorer_url": "https://testnet.steexp.com/tx/642b0791738b1d202cb2e6d3c7fd811310cf0d990baba1a2b418cc4123a970b6",
      "network_name": "Stellar Testnet",
      "network_id": "cee0302d59844d32bdca915c8203dd44b33fbb7edc19051ea37abedf28ecd472"
+  },
+  "meta_data": {
+     "address": {
+        "street": "Teststr.",
+        "number": "1234",
+        ...
+     },
+     "also": {
+        "arbitrary_data": {
+            "status": "possible",
+            "id": 27563
+        } 
+     }
   }
 }
 ```
@@ -146,7 +209,7 @@ A list of [Report resources](#report-resource)
 
 ### PDF Generation
 
-Generate a custom proof of existence certificate PDF.  
+Generate a certificate PDF.  
 
 #### Endpoint
 
@@ -157,24 +220,5 @@ Generate a custom proof of existence certificate PDF.
 ```
 curl -X POST \
     https://api.qed.digital/v1/reports/<slug>/pdf/
-    -H 'Authorization: app-token <API_KEY>' \
-    -d '{
-        "i18n": {...} // See below for full set of i18n options
-        "address": "Immoweb s.a., Avenue Général Dumonceau, 56, B-1190 Forest, Belgium" // Address field
-        "online_check": <URL TO SHA256 ONLINE VALIDATION TOOL> // defaults to https://emn178.github.io/online-tools/sha256_checksum.html
-        "logo_url": "http://example.com/logo.png"  // Please make sure that the image is scaled appropriately
-    }'
+    -H 'Authorization: app-token <API_KEY>'
 ```
-
-#### i18n Parameters
-
-|Key|Description|Default|
-|---|-------|----|
-|`certificate`|Document title|"Certificate of Existence"|
-|`description`|Brief description|"This certificate documents the existence of a file on the blockchain."|
-|`details`|*translatable text*|"Details"|
-|`encryption`|Encryption explanation text|"The checksum of the file was generated using the cryptographic hash function SHA256 (Secure Hash Algorithm 256)"|
-|`check_tx`|*translatable text*|"Check the transaction"|
-|`download_hint`|*translatable text*|"The file can be downloaded here"|
-|`verify_hint`|*translatable text*|"To verify the file manually you can use this tool to generate a checksum and compare to the hash stored on the blockchain"|
-|`no_file`|*translatable text*|"The file was stored outside of the scope of the service. The creator is responsible for providing the original data for evidence.|
