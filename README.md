@@ -32,7 +32,7 @@ An array of 32 bytes can be stored to the blockchain. In order to make the hash 
 |Key|Type|Required|Description|Example|
 |---|----|--------|-------|----|
 | `hash` | `string` | x | hex encoded string representing a byte array (maximum bytes 32) | "646412deadbeef8812" |
-| `provable_files` | `ProvableFile` object | x | A list of files represented by their meta data. Can be empty. |
+| `provable_files` | [`ProvableFile`](#provable-files) list | x | A list of files represented by their meta data. Can be empty. |
 | `original_created_at` | `iso datetime` | x | Timestamp when the report is bundled by the client application |
 | `name` | `string` | - | an arbitrary title | "My new appartement" |
 | `note` | `string` | - | an arbitrary note | "This is so amazing." |
@@ -100,7 +100,7 @@ For a more detailed description of the transaction resource, please jump to the 
 }
 ```
 
-### `ProvableFile` objects
+### `ProvableFile` objects<a name="provable-files"></a>
 
 `ProvableFile` objects represent the files being contained in the timestamped QED proof. Files can be kept secretly, but should be added as references of their original content. 
 Keeping the file hashes as records ensures, that a report's file timestamp can be proven as long as all other report file hashes can be taken into the equation, even if all other files have been lost.
