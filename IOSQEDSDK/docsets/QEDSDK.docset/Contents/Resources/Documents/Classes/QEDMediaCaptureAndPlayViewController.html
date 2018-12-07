@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>QEDMediaCaptureAndPlayViewController Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/QEDMediaCaptureAndPlayViewController" class="dashAnchor"></a>
+    <a title="QEDMediaCaptureAndPlayViewController Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">QEDSDK Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">QEDSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        QEDMediaCaptureAndPlayViewController Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/QEDAPI.html">QEDAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController.html">QEDMediaCaptureAndPlayViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController/DismissReason.html">– DismissReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController/SetupError.html">– SetupError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController/MediaType.html">– MediaType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/QEDMediaCaptureAndPlayViewControllerDelegate.html">QEDMediaCaptureAndPlayViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/QEDFile.html">QEDFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDFile/FileType.html">– FileType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDModel.html">QEDModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDReport.html">QEDReport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDReport/ProofStatus.html">– ProofStatus</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>QEDMediaCaptureAndPlayViewController</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">QEDMediaCaptureAndPlayViewController</span> <span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+
+                </div>
+              </div>
+            <p>A View Controller providing media capture and playback functionality for locally stored media files.</p>
+
+<p>It will switch automatically between media playback and media recording modes depending on the internal value for the local stored media file.</p>
+
+<p>If a local media file is assigned, the controller will be in playback mode, otherwise in capture mode.</p>
+
+<p>If allowed by the <code><a href="../Protocols/QEDMediaCaptureAndPlayViewControllerDelegate.html">QEDMediaCaptureAndPlayViewControllerDelegate</a></code>, a user can trigger the deletion of the local stored media file. After deletion the controller will switch to capturing mode automatically.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Types"></a>
+                <a name="//apple_ref/swift/Section/Types" class="dashAnchor"></a>
+                <a href="#/Types">
+                  <h3 class="section-name">Types</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK36QEDMediaCaptureAndPlayViewControllerC13DismissReasonO"></a>
+                    <a name="//apple_ref/swift/Enum/DismissReason" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK36QEDMediaCaptureAndPlayViewControllerC13DismissReasonO">DismissReason</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represent the reason for dismissal request</p>
+
+                        <a href="../Classes/QEDMediaCaptureAndPlayViewController/DismissReason.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DismissReason</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK36QEDMediaCaptureAndPlayViewControllerC10SetupErrorO"></a>
+                    <a name="//apple_ref/swift/Enum/SetupError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK36QEDMediaCaptureAndPlayViewControllerC10SetupErrorO">SetupError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents an Error on the Setup process of the controller.</p>
+
+                        <a href="../Classes/QEDMediaCaptureAndPlayViewController/SetupError.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">SetupError</span> <span class="p">:</span> <span class="kt">LocalizedError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK36QEDMediaCaptureAndPlayViewControllerC9MediaTypeO"></a>
+                    <a name="//apple_ref/swift/Enum/MediaType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK36QEDMediaCaptureAndPlayViewControllerC9MediaTypeO">MediaType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The type of media presented or captured by the controller</p>
+
+                        <a href="../Classes/QEDMediaCaptureAndPlayViewController/MediaType.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">MediaType</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initialization"></a>
+                <a name="//apple_ref/swift/Section/Initialization" class="dashAnchor"></a>
+                <a href="#/Initialization">
+                  <h3 class="section-name">Initialization</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK36QEDMediaCaptureAndPlayViewControllerC8delegate9directory7fileURL8autoplayAcA0bcdefG8Delegate_p_10Foundation0K0VAKSgSbtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(delegate:directory:fileURL:autoplay:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK36QEDMediaCaptureAndPlayViewControllerC8delegate9directory7fileURL8autoplayAcA0bcdefG8Delegate_p_10Foundation0K0VAKSgSbtcfc">init(delegate:directory:fileURL:autoplay:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code>QEDMediaCaptureAndPlayViewController</code> instance for presentation</p>
+
+<p>The instance provide both capturing and playback of meida content (photos and videos). It will switch automatically between media playback and media capture modes depending on the internal value of <code>fileURL</code>.</p>
+
+<p>When initialised with a valid <code>fileURL</code>, the controller will start on playback mode when presented and will play automatically if <code>autoplay == true</code> and the media file is a video.</p>
+
+<p>If <code>fileURL == nil</code> on initialisation, the controller will start on capture mode when presented.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">delegate</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/QEDMediaCaptureAndPlayViewControllerDelegate.html">QEDMediaCaptureAndPlayViewControllerDelegate</a></span><span class="p">,</span> <span class="nv">directory</span> <span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">fileURL</span> <span class="p">:</span> <span class="kt">URL</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">autoplay</span> <span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delegate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>class</code> instance conforming to the <code><a href="../Protocols/QEDMediaCaptureAndPlayViewControllerDelegate.html">QEDMediaCaptureAndPlayViewControllerDelegate</a></code> protocol. The delegate is not retained</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>directory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A local file directory where to store the newly recorded media files</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An optional URL for a local media file. Defaults to <code>nil</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>autoplay</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An indication if the media should autoplay when initialised with an existing local video URL. Defaults to <code>false</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK36QEDMediaCaptureAndPlayViewControllerC16defaultMediaTypeAC0iJ0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/defaultMediaType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK36QEDMediaCaptureAndPlayViewControllerC16defaultMediaTypeAC0iJ0Ovp">defaultMediaType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The default Media type to launch the controller on when started for capture.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">defaultMediaType</span><span class="p">:</span> <span class="kt">QEDMediaCaptureAndPlayViewController</span><span class="o">.</span><span class="kt"><a href="../Classes/QEDMediaCaptureAndPlayViewController/MediaType.html">MediaType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2018-11-22)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

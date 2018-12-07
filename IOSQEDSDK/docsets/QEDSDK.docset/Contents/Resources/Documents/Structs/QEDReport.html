@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>QEDReport Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/QEDReport" class="dashAnchor"></a>
+    <a title="QEDReport Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">QEDSDK Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">QEDSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        QEDReport Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/QEDAPI.html">QEDAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController.html">QEDMediaCaptureAndPlayViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController/DismissReason.html">– DismissReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController/SetupError.html">– SetupError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController/MediaType.html">– MediaType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/QEDMediaCaptureAndPlayViewControllerDelegate.html">QEDMediaCaptureAndPlayViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/QEDFile.html">QEDFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDFile/FileType.html">– FileType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDModel.html">QEDModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDReport.html">QEDReport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDReport/ProofStatus.html">– ProofStatus</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>QEDReport</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">QEDReport</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                </div>
+              </div>
+            <p>A <code>QEDReport</code> represents a group of files stored that can be time stamped and notarised by the backend</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Types"></a>
+                <a name="//apple_ref/swift/Section/Types" class="dashAnchor"></a>
+                <a href="#/Types">
+                  <h3 class="section-name">Types</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV11ProofStatusO"></a>
+                    <a name="//apple_ref/swift/Enum/ProofStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV11ProofStatusO">ProofStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The curernt backend certificate state for a <code><a href="../Structs/QEDReport.html">QEDReport</a></code></p>
+
+                        <a href="../Structs/QEDReport/ProofStatus.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ProofStatus</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initialization"></a>
+                <a name="//apple_ref/swift/Section/Initialization" class="dashAnchor"></a>
+                <a href="#/Initialization">
+                  <h3 class="section-name">Initialization</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV4nameACSS_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV4nameACSS_tcfc">init(name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code>QEDReport</code> instance from scratch with a given name</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A String representing the name of the report</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new <code>QEDReport</code> instance with the given <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4nameSSvp">name</a></code> and a <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV7created10Foundation4DateVvp">created</a></code> date set to the current time. The initial value of <code>status</code> is <code>undefined</code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV22fromQEDAPIResponseDictACSgSDySSypG_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(fromQEDAPIResponseDict:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV22fromQEDAPIResponseDictACSgSDySSypG_tcfc">init(fromQEDAPIResponseDict:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code>QEDReport</code> instance from a Dictionary from API response.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">fromQEDAPIResponseDict</span> <span class="nv">dict</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dict</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A dictionary representation of a <code><a href="../Classes/QEDAPI.html">QEDAPI</a></code> qualified response with report data</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new <code>QEDReport</code> instance based on <code>dict</code>. It must include <strong>name</strong>, <strong>slug</strong>, <strong>hash</strong>, <strong>created</strong> and <strong>status</strong> values as a minimum otherwise the instantiation will fail and return <code>nil</code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Default%20Storage%20Directories"></a>
+                <a name="//apple_ref/swift/Section/Default Storage Directories" class="dashAnchor"></a>
+                <a href="#/Default%20Storage%20Directories">
+                  <h3 class="section-name">Default Storage Directories</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV12pdfDirectory10Foundation3URLVvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/pdfDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV12pdfDirectory10Foundation3URLVvpZ">pdfDirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Storage directory for the downloaded PDF files in the app bundle.</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    <p>When downloading PDF certificates for a <code>QEDReport</code> using the <code><a href="../Classes/QEDAPI.html">QEDAPI</a></code> class, they will be automatically stored on the root level of this local directory.</p>
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>You can get the exact PDF url by accessing the <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV6pdfURL10Foundation0D0Vvp">pdfURL</a></code> property of the <code>QEDReport</code> instance.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">pdfDirectory</span><span class="p">:</span> <span class="kt">URL</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Report%20Attributes%20and%20Metadata"></a>
+                <a name="//apple_ref/swift/Section/Report Attributes and Metadata" class="dashAnchor"></a>
+                <a href="#/Report%20Attributes%20and%20Metadata">
+                  <h3 class="section-name">Report Attributes and Metadata</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV4nameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV4nameSSvp">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name for the stored report</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV7created10Foundation4DateVvp"></a>
+                    <a name="//apple_ref/swift/Property/created" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV7created10Foundation4DateVvp">created</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The client date when the report was created.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Used only as metadata.
+
+</div>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    Will differ from the timestamp on the blockchain certificate.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">created</span><span class="p">:</span> <span class="kt">Date</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV4noteSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/note" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV4noteSSSgvp">note</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An optional string with a note about the report.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">note</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV5filesSayAA7QEDFileVGvp"></a>
+                    <a name="//apple_ref/swift/Property/files" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV5filesSayAA7QEDFileVGvp">files</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The array of associated files to the report</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">files</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/QEDFile.html">QEDFile</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Synch%20status%20with%20backend%20and%20blockchain"></a>
+                <a name="//apple_ref/swift/Section/Synch status with backend and blockchain" class="dashAnchor"></a>
+                <a href="#/Synch%20status%20with%20backend%20and%20blockchain">
+                  <h3 class="section-name">Synch status with backend and blockchain</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV4slugSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/slug" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV4slugSSSgvp">slug</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A unique string that identifies the reported file in the backend.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    When initially created, this value is <code>nil</code>.
+
+</div>
+
+<p>When using the <code><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC4send_2in10completionyAA9QEDReportV_SSyAHSg_s5Error_pSgtctFZ">QEDAPI.send(_:in:completion:)</a></code> method to submit reports, this attribute gets updated based on the response from server.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">slug</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV7hasSlugSbvp"></a>
+                    <a name="//apple_ref/swift/Property/hasSlug" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV7hasSlugSbvp">hasSlug</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates if the reported has a slug, i.e. if already been created in the server.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hasSlug</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV11proofStatusAC05ProofD0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/proofStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV11proofStatusAC05ProofD0Ovp">proofStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current status of the notarisation on the blockchain as reported by the backend.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">proofStatus</span><span class="p">:</span> <span class="kt"><a href="../Structs/QEDReport/ProofStatus.html">ProofStatus</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Managing%20the%20Report%20Hash"></a>
+                <a name="//apple_ref/swift/Section/Managing the Report Hash" class="dashAnchor"></a>
+                <a href="#/Managing%20the%20Report%20Hash">
+                  <h3 class="section-name">Managing the Report Hash</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV4hashSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/hash" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV4hashSSSgvp">hash</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The hash to be stored on the blockchain as proof of existence of the associated files.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This value must not be <code>nil</code> when issuing a report with the <code><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC4send_2in10completionyAA9QEDReportV_SSyAHSg_s5Error_pSgtctFZ">QEDAPI.send(_:in:completion:)</a></code> method
+
+</div>
+
+<p>Use the convenience method <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV18withCalculatedHashACyF">withCalculatedHash()</a></code> to calculate the hash of the report.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hash</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV18withCalculatedHashACyF"></a>
+                    <a name="//apple_ref/swift/Method/withCalculatedHash()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV18withCalculatedHashACyF">withCalculatedHash()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a <code>QEDReport</code> instance with the <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4hashSSSgvp">hash</a></code> calculated from the hash of the associated files.</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    Will calculate the hash of the associated files that are missing it.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withCalculatedHash</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">QEDReport</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns a copy of the current instance where the <em>SHA256</em> <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4hashSSSgvp">hash</a></code> has been calculated from the hash of the associated files that have a hash value.
+If there is no associated files with a hash value then the same unaffected instance is returned (i.e. <code>self</code>)</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Managing%20the%20Certificate%20PDF%20File%20Storage"></a>
+                <a name="//apple_ref/swift/Section/Managing the Certificate PDF File Storage" class="dashAnchor"></a>
+                <a href="#/Managing%20the%20Certificate%20PDF%20File%20Storage">
+                  <h3 class="section-name">Managing the Certificate PDF File Storage</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV6pdfURL10Foundation0D0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/pdfURL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV6pdfURL10Foundation0D0Vvp">pdfURL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The URL for the PDF certificate file when locally stored.</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    This property always holds a URL value without checking if the file actually exist.
+
+</div>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV11hasLocalPDFSbvp">hasLocalPDF</a></code>
+
+</div>
+
+<p>Use <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV11hasLocalPDFSbvp">hasLocalPDF</a></code> to check for PDF file existence</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">pdfURL</span><span class="p">:</span> <span class="kt">URL</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV11hasLocalPDFSbvp"></a>
+                    <a name="//apple_ref/swift/Property/hasLocalPDF" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV11hasLocalPDFSbvp">hasLocalPDF</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates if the instance references and existing local certificate file at <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV6pdfURL10Foundation0D0Vvp">pdfURL</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hasLocalPDF</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Interfacing%20with%20%60QEDAPI%60"></a>
+                <a name="//apple_ref/swift/Section/Interfacing with `QEDAPI`" class="dashAnchor"></a>
+                <a href="#/Interfacing%20with%20%60QEDAPI%60">
+                  <h3 class="section-name">Interfacing with `QEDAPI`</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV24dictionaryRepresentationSDySSs11AnyHashableVGyF"></a>
+                    <a name="//apple_ref/swift/Method/dictionaryRepresentation()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV24dictionaryRepresentationSDySSs11AnyHashableVGyF">dictionaryRepresentation()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a dictionary representation of the instance.</p>
+
+<p>The keys are <code>String</code> instances as described on <a href="http://docs.qed.digital"><em>QED REST API</em></a>. Values are <code>AnyHashable</code> instances derived from the respective instance attributes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dictionaryRepresentation</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">AnyHashable</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns a dictionary compatible with the <code><a href="../Classes/QEDAPI.html">QEDAPI</a></code> reporting functionality.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Interacting%20with%20other%20instances"></a>
+                <a name="//apple_ref/swift/Section/Interacting with other instances" class="dashAnchor"></a>
+                <a href="#/Interacting%20with%20other%20instances">
+                  <h3 class="section-name">Interacting with other instances</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV5merge4withA2C_tF"></a>
+                    <a name="//apple_ref/swift/Method/merge(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV5merge4withA2C_tF">merge(with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new <code>QEDReport</code> instance by merging the current instance with the provided <code>QEDReport</code> instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">merge</span><span class="p">(</span><span class="n">with</span> <span class="nv">report</span><span class="p">:</span> <span class="kt">QEDReport</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">QEDReport</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns a new <code>QEDReport</code> instance.
+All the properties of the provided <code>QEDReport</code> instance that are non <code>nil</code> will prevail over the values for the attributes of the current instance, the <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV11proofStatusAC05ProofD0Ovp">proofStatus</a></code> is also merged</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Conformance%20to%20%60Comparable%60%20protocol"></a>
+                <a name="//apple_ref/swift/Section/Conformance to `Comparable` protocol" class="dashAnchor"></a>
+                <a href="#/Conformance%20to%20%60Comparable%60%20protocol">
+                  <h3 class="section-name">Conformance to `Comparable` protocol</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV1loiySbAC_ACtFZ"></a>
+                    <a name="//apple_ref/swift/Method/&lt;(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV1loiySbAC_ACtFZ">&lt;(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a Boolean value indicating whether the value of the first argument is less than that of the second argument.</p>
+
+<p><code>&lt;</code> is purely based on the same comparison executed on the <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV7created10Foundation4DateVvp">created</a></code> attribute of the instances.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">QEDReport</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">QEDReport</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV2eeoiySbAC_ACtFZ"></a>
+                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV2eeoiySbAC_ACtFZ">==(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a Boolean value indicating whether two values are equal.</p>
+
+<p>Two <code>QEDReport</code> instances are considered equal if they have the same <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4slugSSSgvp">slug</a></code> (i.e. They represent the same report on the backend).</p>
+
+<p>If one or both <code>QEDReport</code>&lsquo;s are missing the <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4slugSSSgvp">slug</a></code>, they are considered equal if they have the same <code>id</code>.</p>
+
+<p>If one or both <code>QEDReport</code>&rsquo;s are missing the <code>id</code>, they are considered equal if they have the same <code><a href="../Structs/QEDReport.html#/s:6QEDSDK9QEDReportV4nameSSvp">name</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">QEDReport</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">QEDReport</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2018-11-22)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

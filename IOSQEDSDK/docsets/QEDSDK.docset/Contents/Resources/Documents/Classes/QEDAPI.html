@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>QEDAPI Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/QEDAPI" class="dashAnchor"></a>
+    <a title="QEDAPI Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">QEDSDK Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">QEDSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        QEDAPI Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/QEDAPI.html">QEDAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController.html">QEDMediaCaptureAndPlayViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController/DismissReason.html">– DismissReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController/SetupError.html">– SetupError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController/MediaType.html">– MediaType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/QEDMediaCaptureAndPlayViewControllerDelegate.html">QEDMediaCaptureAndPlayViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/QEDFile.html">QEDFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDFile/FileType.html">– FileType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDModel.html">QEDModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDReport.html">QEDReport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDReport/ProofStatus.html">– ProofStatus</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>QEDAPI</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">QEDAPI</span></code></pre>
+
+                </div>
+              </div>
+            <p>The <code>QEDAPI</code> provides a wrapper class on the <a href="http://docs.qed.digital"><em>QED REST API</em></a>.</p>
+
+<p>It uses the <code><a href="../Structs/QEDReport.html">QEDReport</a></code> and <code><a href="../Structs/QEDFile.html">QEDFile</a></code> structs to represent reports and files for certification.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Types"></a>
+                <a name="//apple_ref/swift/Section/Types" class="dashAnchor"></a>
+                <a href="#/Types">
+                  <h3 class="section-name">Types</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK6QEDAPIC13ReportHandlera"></a>
+                    <a name="//apple_ref/swift/Alias/ReportHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK6QEDAPIC13ReportHandlera">ReportHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The handler for report related requests made to <a href="http://docs.qed.digital"><em>QED REST API</em></a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ReportHandler</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="../Structs/QEDReport.html">QEDReport</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>report</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>nil</code> if request failed, otherwise a <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instance updated based on API response data.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An error object that indicates why the request failed, or <code>nil</code> if the request was successful.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK6QEDAPIC14SuccessHandlera"></a>
+                    <a name="//apple_ref/swift/Alias/SuccessHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK6QEDAPIC14SuccessHandlera">SuccessHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The handler for requests made to <a href="http://docs.qed.digital"><em>QED REST API</em></a> that return a <code>success</code> boolean.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SuccessHandler</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>success</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>true</code> if request succeeded, <code>false</code> otherwise.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An error object that indicates why the request failed, or <code>nil</code> if the request was successful.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Setup"></a>
+                <a name="//apple_ref/swift/Section/Setup" class="dashAnchor"></a>
+                <a href="#/Setup">
+                  <h3 class="section-name">Setup</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK6QEDAPIC5setup4withySS_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/setup(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK6QEDAPIC5setup4withySS_tFZ">setup(with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Will setup the <code>QEDAPI</code> shared instance with the required <code>apiKey</code> to make authenticated requests.</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    <p>If you use the methods on this class without calling this setup method first, the requests will still be made but will fail on the server due to Authentication restrictions.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">setup</span><span class="p">(</span><span class="n">with</span> <span class="nv">apiKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>apiKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The key to make authenticated requests to the <a href="http://docs.qed.digital"><em>QED REST API</em></a></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Issuing%20API%20Requests"></a>
+                <a name="//apple_ref/swift/Section/Issuing API Requests" class="dashAnchor"></a>
+                <a href="#/Issuing%20API%20Requests">
+                  <h3 class="section-name">Issuing API Requests</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK6QEDAPIC4send_2in10completionyAA9QEDReportV_SSyAHSg_s5Error_pSgtctFZ"></a>
+                    <a name="//apple_ref/swift/Method/send(_:in:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK6QEDAPIC4send_2in10completionyAA9QEDReportV_SSyAHSg_s5Error_pSgtctFZ">send(_:in:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Will issue a request to the backend (for initial submission or updates if previously reported) for a notarizing report of files represented by a given <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instance</p>
+
+<p>After posting a report for a <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instance for the first time, a blockchain proof is initiated.</p>
+
+<p>The server will respond with the updated report including blockchain transaction details. In most cases the report status will be <code><a href="../Structs/QEDReport/ProofStatus.html#/s:6QEDSDK9QEDReportV11ProofStatusO7pendingyA2EmF">QEDReport.ProofStatus.pending</a></code> when posting for the first time</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="n">_</span> <span class="nv">report</span> <span class="p">:</span> <span class="kt"><a href="../Structs/QEDReport.html">QEDReport</a></span><span class="p">,</span> <span class="k">in</span> <span class="nv">language</span> <span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"en"</span><span class="p">,</span> <span class="nv">completion</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC13ReportHandlera">ReportHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>report</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Structs/QEDReport.html">QEDReport</a></code> representing the files to be notarized</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC13ReportHandlera">ReportHandler</a></code> block to call when the request is complete. This handler is not called on the main thread</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK6QEDAPIC6update_10completionyAA9QEDReportV_yAGSg_s5Error_pSgtctFZ"></a>
+                    <a name="//apple_ref/swift/Method/update(_:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK6QEDAPIC6update_10completionyAA9QEDReportV_yAGSg_s5Error_pSgtctFZ">update(_:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Will get the update report data for a given <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instance from the backend.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="n">_</span> <span class="nv">report</span> <span class="p">:</span> <span class="kt"><a href="../Structs/QEDReport.html">QEDReport</a></span><span class="p">,</span> <span class="nv">completion</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC13ReportHandlera">ReportHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>report</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Structs/QEDReport.html">QEDReport</a></code> representing a notarization report to be updated from backend</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC13ReportHandlera">ReportHandler</a></code> block to call when the request is complete. This handler is not called on the main thread</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK6QEDAPIC17forceStatusUpdate3for10completionyAA9QEDReportV_yAHSg_s5Error_pSgtctFZ"></a>
+                    <a name="//apple_ref/swift/Method/forceStatusUpdate(for:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK6QEDAPIC17forceStatusUpdate3for10completionyAA9QEDReportV_yAHSg_s5Error_pSgtctFZ">forceStatusUpdate(for:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Will get a forced update of the certification status for a given <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instance from the backend.</p>
+
+<p>A Force status update will make the backed update the certification directly from the blockchain if it is not already <code>confirmed</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">forceStatusUpdate</span><span class="p">(</span><span class="k">for</span> <span class="nv">report</span> <span class="p">:</span> <span class="kt"><a href="../Structs/QEDReport.html">QEDReport</a></span><span class="p">,</span> <span class="nv">completion</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC13ReportHandlera">ReportHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>report</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Structs/QEDReport.html">QEDReport</a></code> representing a notarization report to be updated from backend</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC13ReportHandlera">ReportHandler</a></code> block to call when the request is complete. This handler is not called on the main thread</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK6QEDAPIC11generatePDF3for2in10completionyAA9QEDReportV_SSySb_s5Error_pSgtctFZ"></a>
+                    <a name="//apple_ref/swift/Method/generatePDF(for:in:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK6QEDAPIC11generatePDF3for2in10completionyAA9QEDReportV_SSySb_s5Error_pSgtctFZ">generatePDF(for:in:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Will reqeust the generation and download of the PDF document for a given <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instance.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The <code>report</code>&lsquo;s <code>QEDReport.poofStatus</code> must be <code>QEDReport.ProofStatus.certified</code>.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">generatePDF</span><span class="p">(</span><span class="k">for</span> <span class="nv">report</span> <span class="p">:</span> <span class="kt"><a href="../Structs/QEDReport.html">QEDReport</a></span><span class="p">,</span> <span class="k">in</span> <span class="nv">language</span> <span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"en"</span><span class="p">,</span> <span class="nv">completion</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC14SuccessHandlera">SuccessHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>report</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Structs/QEDReport.html">QEDReport</a></code> instance for which a PDF certificate is being requested.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>language</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>String</code> representing the languate the PDF is prefered</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Classes/QEDAPI.html#/s:6QEDSDK6QEDAPIC14SuccessHandlera">SuccessHandler</a></code> block to call when the request is complete. This handler is not called on the main thread</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2018-11-22)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

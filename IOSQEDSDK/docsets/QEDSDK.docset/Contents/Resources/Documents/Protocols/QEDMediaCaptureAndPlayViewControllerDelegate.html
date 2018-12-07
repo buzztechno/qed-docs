@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>QEDMediaCaptureAndPlayViewControllerDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/QEDMediaCaptureAndPlayViewControllerDelegate" class="dashAnchor"></a>
+    <a title="QEDMediaCaptureAndPlayViewControllerDelegate Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">QEDSDK Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">QEDSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        QEDMediaCaptureAndPlayViewControllerDelegate Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/QEDAPI.html">QEDAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController.html">QEDMediaCaptureAndPlayViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController/DismissReason.html">– DismissReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController/SetupError.html">– SetupError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDMediaCaptureAndPlayViewController/MediaType.html">– MediaType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/QEDMediaCaptureAndPlayViewControllerDelegate.html">QEDMediaCaptureAndPlayViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/QEDFile.html">QEDFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDFile/FileType.html">– FileType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDModel.html">QEDModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDReport.html">QEDReport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDReport/ProofStatus.html">– ProofStatus</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>QEDMediaCaptureAndPlayViewControllerDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">QEDMediaCaptureAndPlayViewControllerDelegate</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>A class conforming to this protocol will receive the necessary method calls to handle the lifecycle for the media playback, capture and deletion from a <code><a href="../Classes/QEDMediaCaptureAndPlayViewController.html">QEDMediaCaptureAndPlayViewController</a></code>.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Managing%20File%20Deletion"></a>
+                <a name="//apple_ref/swift/Section/Managing File Deletion" class="dashAnchor"></a>
+                <a href="#/Managing%20File%20Deletion">
+                  <h3 class="section-name">Managing File Deletion</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK44QEDMediaCaptureAndPlayViewControllerDelegateP05mediacdefG0_19allowToDeleteFileAtSbAA0bcdefG0C_10Foundation3URLVtF"></a>
+                    <a name="//apple_ref/swift/Method/mediaCaptureAndPlayViewController(_:allowToDeleteFileAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK44QEDMediaCaptureAndPlayViewControllerDelegateP05mediacdefG0_19allowToDeleteFileAtSbAA0bcdefG0C_10Foundation3URLVtF">mediaCaptureAndPlayViewController(_:allowToDeleteFileAt:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asks the delegate if a local media file can be deleted.</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    Returning <code>true</code> does not trigger file deletion, but a delete button will be made available to the user. File deletion can then be triggered by the user by tapping on the delete button.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">mediaCaptureAndPlayViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt"><a href="../Classes/QEDMediaCaptureAndPlayViewController.html">QEDMediaCaptureAndPlayViewController</a></span><span class="p">,</span> <span class="n">allowToDeleteFileAt</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>controller</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The controller object informing the delegate of this event</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The local URL for the file the request is made for</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> if the file at <code>fileURL</code> could be deleted by the user, otherwise <code>false</code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK44QEDMediaCaptureAndPlayViewControllerDelegateP05mediacdefG0_24fileDeletionRequestedForyAA0bcdefG0C_10Foundation3URLVtF"></a>
+                    <a name="//apple_ref/swift/Method/mediaCaptureAndPlayViewController(_:fileDeletionRequestedFor:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK44QEDMediaCaptureAndPlayViewControllerDelegateP05mediacdefG0_24fileDeletionRequestedForyAA0bcdefG0C_10Foundation3URLVtF">mediaCaptureAndPlayViewController(_:fileDeletionRequestedFor:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate a file deletion has been requested for a local file.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The controller implementation will attempt to delete the file from the file system, but if it fails, will do silently. It is up to your implemnetation to check that the file has been actually deleted if necessary.</p>
+
+</div>
+
+<p>After calling this method the controller will clear its reference to the reported <code>fileURL</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">mediaCaptureAndPlayViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt"><a href="../Classes/QEDMediaCaptureAndPlayViewController.html">QEDMediaCaptureAndPlayViewController</a></span><span class="p">,</span> <span class="n">fileDeletionRequestedFor</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>controller</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The controller object informing the delegate of this event</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The local URL for the file that has been requested for deletion</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Managing%20Meida%20Capture"></a>
+                <a name="//apple_ref/swift/Section/Managing Meida Capture" class="dashAnchor"></a>
+                <a href="#/Managing%20Meida%20Capture">
+                  <h3 class="section-name">Managing Meida Capture</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK44QEDMediaCaptureAndPlayViewControllerDelegateP05mediacdefG0_18userCapturedFileAtyAA0bcdefG0C_10Foundation3URLVtF"></a>
+                    <a name="//apple_ref/swift/Method/mediaCaptureAndPlayViewController(_:userCapturedFileAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK44QEDMediaCaptureAndPlayViewControllerDelegateP05mediacdefG0_18userCapturedFileAtyAA0bcdefG0C_10Foundation3URLVtF">mediaCaptureAndPlayViewController(_:userCapturedFileAt:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate the user has finished capturing a new media file</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    When this method is called, the user has ended capturing a media file which is now available at <code>fileURL</code>. You must not delete this file as the controller has now switched to playback mode and expects the existence of the media file at <code>fileURL</code>
+
+</div>
+
+<p>You can choose to act on this request and trigger your logic for new media files, but be aware that the user can still trigger file deletion for the new media. It is recommended instead to handle new media logic once the user has requested to dismiss the controller. For more info on this, see <code><a href="../Protocols/QEDMediaCaptureAndPlayViewControllerDelegate.html#/s:6QEDSDK44QEDMediaCaptureAndPlayViewControllerDelegateP05mediacdefG0_37dismissalRequestWithNewRecordedFileAt6reasonyAA0bcdefG0C_10Foundation3URLVSgAH13DismissReasonOtF">mediaCaptureAndPlayViewController(_:dismissalRequestWithNewRecordedFileAt:reason:)</a></code></p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="../Protocols/QEDMediaCaptureAndPlayViewControllerDelegate.html#/s:6QEDSDK44QEDMediaCaptureAndPlayViewControllerDelegateP05mediacdefG0_37dismissalRequestWithNewRecordedFileAt6reasonyAA0bcdefG0C_10Foundation3URLVSgAH13DismissReasonOtF">mediaCaptureAndPlayViewController(_:dismissalRequestWithNewRecordedFileAt:reason:)</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">mediaCaptureAndPlayViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt"><a href="../Classes/QEDMediaCaptureAndPlayViewController.html">QEDMediaCaptureAndPlayViewController</a></span><span class="p">,</span> <span class="n">userCapturedFileAt</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>controller</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The controller object informing the delegate of this event</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The local URL for the new media file captured by the user</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Managing%20Controller%20Dismissal%20Requests"></a>
+                <a name="//apple_ref/swift/Section/Managing Controller Dismissal Requests" class="dashAnchor"></a>
+                <a href="#/Managing%20Controller%20Dismissal%20Requests">
+                  <h3 class="section-name">Managing Controller Dismissal Requests</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK44QEDMediaCaptureAndPlayViewControllerDelegateP05mediacdefG0_37dismissalRequestWithNewRecordedFileAt6reasonyAA0bcdefG0C_10Foundation3URLVSgAH13DismissReasonOtF"></a>
+                    <a name="//apple_ref/swift/Method/mediaCaptureAndPlayViewController(_:dismissalRequestWithNewRecordedFileAt:reason:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK44QEDMediaCaptureAndPlayViewControllerDelegateP05mediacdefG0_37dismissalRequestWithNewRecordedFileAt6reasonyAA0bcdefG0C_10Foundation3URLVSgAH13DismissReasonOtF">mediaCaptureAndPlayViewController(_:dismissalRequestWithNewRecordedFileAt:reason:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate the user has requested dismissal of the controller.</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    It is the <code>delegate</code> responsibility to actually dismiss the controller.
+
+</div>
+
+<p><code>fileURL</code> when not <code>nil</code> is the local storage URL for a new captured media file.</p>
+
+<p>If <code>reason</code> is <code>save</code> the user has indicated intention to save the file by tapping on the save button. If <code>reason</code> is <code>close</code> user has indicated to just dismiss the controller with no intention of saving the file.</p>
+
+<p>It is up to the <code>delegate</code> to delete the file at <code>fileURL</code> from the file system when <code>fileURL</code> is not <code>nil</code> and <code>reason == close</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">mediaCaptureAndPlayViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt"><a href="../Classes/QEDMediaCaptureAndPlayViewController.html">QEDMediaCaptureAndPlayViewController</a></span><span class="p">,</span> <span class="n">dismissalRequestWithNewRecordedFileAt</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="nv">reason</span><span class="p">:</span> <span class="kt"><a href="../Classes/QEDMediaCaptureAndPlayViewController.html">QEDMediaCaptureAndPlayViewController</a></span><span class="o">.</span><span class="kt">DismissReason</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>controller</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The controller object informing the delegate of this event</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The local URL for the new captured media file (if any).</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>reason</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An instance of <code><a href="../Classes/QEDMediaCaptureAndPlayViewController/DismissReason.html">QEDMediaCaptureAndPlayViewController.DismissReason</a></code> indicating the reason for the controller dismissal request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK44QEDMediaCaptureAndPlayViewControllerDelegateP05mediacdefG0_21dismissalRequestDueToyAA0bcdefG0C_AG10SetupErrorOtF"></a>
+                    <a name="//apple_ref/swift/Method/mediaCaptureAndPlayViewController(_:dismissalRequestDueTo:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK44QEDMediaCaptureAndPlayViewControllerDelegateP05mediacdefG0_21dismissalRequestDueToyAA0bcdefG0C_AG10SetupErrorOtF">mediaCaptureAndPlayViewController(_:dismissalRequestDueTo:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate the controller needs to be dismissed due to a setup error.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">mediaCaptureAndPlayViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt"><a href="../Classes/QEDMediaCaptureAndPlayViewController.html">QEDMediaCaptureAndPlayViewController</a></span><span class="p">,</span> <span class="n">dismissalRequestDueTo</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Classes/QEDMediaCaptureAndPlayViewController.html">QEDMediaCaptureAndPlayViewController</a></span><span class="o">.</span><span class="kt">SetupError</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>controller</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The controller object informing the delegate of this event</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An instance of <code><a href="../Classes/QEDMediaCaptureAndPlayViewController/SetupError.html">QEDMediaCaptureAndPlayViewController.SetupError</a></code> indicating the reason for controller setup failure.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2018-11-22)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
