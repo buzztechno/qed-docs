@@ -105,12 +105,15 @@ For a more detailed description of the transaction resource, please jump to the 
 `ProvableFile` objects represent the files being contained in the timestamped QED proof. Files can be kept secretly, but should be added as references of their original content. 
 Keeping the file hashes as records ensures, that a report's file timestamp can be proven as long as all other report file hashes can be taken into the equation, even if all other files have been lost.
 
+The `file` field is optional to link to a web storage.
+
 
 ```
 {
     "slug": "BZzRxnX", //
     "hash": "968b0ef546556914662ed0376c4db10a67a03ed137c3168662edb0bab7104ed0",
-    "file_name": "my-file.jpg"
+    "file_name": "my-file.jpg",
+    "file": "https://proof-existence-stage.s3.amazonaws.com/report-file.jpg",
 }
 ```
 
@@ -143,7 +146,8 @@ For an explanation of the `tx` object please jump to the [transaction resource](
   "provable_files": [{
      "slug": "BZzRxnX",
      "hash": "968b0ef...", // SHA256 hash representation of the file binary
-     "file_name": "my-file.jpg"
+     "file_name": "my-file.jpg",
+     "file": "https://proof-existence-production.s3.amazonaws.com/report-file.jpg",
   }],
   "tx": {
      "hash": "af051c4d7a44a43459661b0943153d929f5370beacfeedc6cde6545fae981969"
