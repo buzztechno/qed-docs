@@ -56,18 +56,26 @@ curl -X POST \
              "file_name": "my-file.jpg"
         }],
         "meta_data": {   // optional meta data
-             "address": {
-                "street": "Teststr.",
-                "number": "1234",
-                ...
-             },
-             "also": {
-                "arbitrary_data": {
-                    "status": "possible",
-                    "id": 27563
-                } 
-             }
-          }
+            "property": {
+                "location": {
+                    "address": {
+                        "number": "property",
+                        "street": "Bahnhofstrasse 2",
+                        "country": "Belgium",
+                        "postalCode": "10245"
+                    }
+                }
+            },
+            "transaction": {
+                "contractStartDate": "27 Feb 2020",
+                "relationToProperty": "Tenant"
+            },
+            "also":{
+               "arbitrary_data": {
+                   "status": "possible",
+                   "id": 27563
+               } 
+            }
         }
     }'
 ```
