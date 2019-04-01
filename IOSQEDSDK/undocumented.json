@@ -1,6 +1,19 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/alfhern/Documents/Development/ASDigital/QEDSDK/QEDSDK/QEDSDK/Model/QEDUserProperties.swift",
+      "line": 81,
+      "symbol": "MFMailList.dictionaryRepresentation(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alfhern/Documents/Development/ASDigital/QEDSDK/QEDSDK/QEDSDK/Model/QEDUserProperties.swift",
+      "line": 93,
+      "symbol": "MFMailList.statusString",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Users/alfhern/Documents/Development/ASDigital/QEDSDK"
 }
