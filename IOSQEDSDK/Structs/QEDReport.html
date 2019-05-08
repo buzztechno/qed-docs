@@ -14,7 +14,7 @@
     <a title="QEDReport Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">QEDSDK Docs</a> (97% documented)</p>
+        <p><a href="../index.html">QEDSDK Docs</a> (93% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -32,6 +32,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/QEDAPI.html">QEDAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDAPI/Notifications.html">– Notifications</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/QEDMediaCaptureAndPlayViewController.html">QEDMediaCaptureAndPlayViewController</a>
@@ -68,6 +71,9 @@
                 <a href="../Structs/QEDFile/FileType.html">– FileType</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/QEDFile/UploadStatus.html">– UploadStatus</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/QEDModel.html">QEDModel</a>
               </li>
               <li class="nav-group-task">
@@ -75,6 +81,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/QEDReport/ProofStatus.html">– ProofStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDUserProperties.html">QEDUserProperties</a>
               </li>
             </ul>
           </li>
@@ -545,6 +554,33 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV13metadataStoreSDySaySSGAA10AnyCodableVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/metadataStore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV13metadataStoreSDySaySSGAA10AnyCodableVGSgvp">metadataStore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">metadataStore</span><span class="p">:</span> <span class="p">[[</span><span class="kt">String</span><span class="p">]</span> <span class="p">:</span> <span class="kt">AnyCodable</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -631,10 +667,10 @@ If there is no associated files with a hash value then the same unaffected insta
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Managing%20the%20Certificate%20PDF%20File%20Storage"></a>
-                <a name="//apple_ref/swift/Section/Managing the Certificate PDF File Storage" class="dashAnchor"></a>
-                <a href="#/Managing%20the%20Certificate%20PDF%20File%20Storage">
-                  <h3 class="section-name">Managing the Certificate PDF File Storage</h3>
+                <a name="/Managing%20the%20Certificate"></a>
+                <a name="//apple_ref/swift/Section/Managing the Certificate" class="dashAnchor"></a>
+                <a href="#/Managing%20the%20Certificate">
+                  <h3 class="section-name">Managing the Certificate</h3>
                 </a>
               </div>
               <ul>
@@ -698,6 +734,33 @@ If there is no associated files with a hash value then the same unaffected insta
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hasLocalPDF</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK9QEDReportV14certificateUrl10Foundation3URLVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/certificateUrl" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK9QEDReportV14certificateUrl10Foundation3URLVSgvp">certificateUrl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The remote URL when file is stored on the web</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">certificateUrl</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -869,8 +932,8 @@ All the properties of the provided <code>QEDReport</code> instance that are non 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2019-04-01)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2019-05-08)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

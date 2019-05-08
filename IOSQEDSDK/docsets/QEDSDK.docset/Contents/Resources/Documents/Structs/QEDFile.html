@@ -14,7 +14,7 @@
     <a title="QEDFile Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">QEDSDK Docs</a> (97% documented)</p>
+        <p><a href="../index.html">QEDSDK Docs</a> (93% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -32,6 +32,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/QEDAPI.html">QEDAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QEDAPI/Notifications.html">– Notifications</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/QEDMediaCaptureAndPlayViewController.html">QEDMediaCaptureAndPlayViewController</a>
@@ -68,6 +71,9 @@
                 <a href="../Structs/QEDFile/FileType.html">– FileType</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/QEDFile/UploadStatus.html">– UploadStatus</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/QEDModel.html">QEDModel</a>
               </li>
               <li class="nav-group-task">
@@ -75,6 +81,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/QEDReport/ProofStatus.html">– ProofStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QEDUserProperties.html">QEDUserProperties</a>
               </li>
             </ul>
           </li>
@@ -125,6 +134,34 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">FileType</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK7QEDFileV12UploadStatusO"></a>
+                    <a name="//apple_ref/swift/Enum/UploadStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK7QEDFileV12UploadStatusO">UploadStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes the upload status of the file to storage servers</p>
+
+                        <a href="../Structs/QEDFile/UploadStatus.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">UploadStatus</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                         </div>
                       </div>
@@ -516,6 +553,33 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK7QEDFileV13metadataStoreSDySaySSGAA10AnyCodableVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/metadataStore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK7QEDFileV13metadataStoreSDySaySSGAA10AnyCodableVGSgvp">metadataStore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">metadataStore</span><span class="p">:</span> <span class="p">[[</span><span class="kt">String</span><span class="p">]</span> <span class="p">:</span> <span class="kt">AnyCodable</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -703,6 +767,33 @@ If there is no local file (i.e. <code><a href="../Structs/QEDFile.html#/s:6QEDSD
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:6QEDSDK7QEDFileV12uploadStatusAC06UploadD0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/uploadStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK7QEDFileV12uploadStatusAC06UploadD0Ovp">uploadStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The status of the file upload to storage servers</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">uploadStatus</span><span class="p">:</span> <span class="kt"><a href="../Structs/QEDFile/UploadStatus.html">UploadStatus</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:6QEDSDK7QEDFileV9remoteUrl10Foundation3URLVSgvp"></a>
                     <a name="//apple_ref/swift/Property/remoteUrl" class="dashAnchor"></a>
                     <a class="token" href="#/s:6QEDSDK7QEDFileV9remoteUrl10Foundation3URLVSgvp">remoteUrl</a>
@@ -730,9 +821,9 @@ If there is no local file (i.e. <code><a href="../Structs/QEDFile.html#/s:6QEDSD
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK7QEDFileV13hasRemoteFileSbvp"></a>
-                    <a name="//apple_ref/swift/Property/hasRemoteFile" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK7QEDFileV13hasRemoteFileSbvp">hasRemoteFile</a>
+                    <a name="/s:6QEDSDK7QEDFileV20canAttemptFileUploadSbvp"></a>
+                    <a name="//apple_ref/swift/Property/canAttemptFileUpload" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK7QEDFileV20canAttemptFileUploadSbvp">canAttemptFileUpload</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -740,16 +831,56 @@ If there is no local file (i.e. <code><a href="../Structs/QEDFile.html#/s:6QEDSD
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates if the file has a remote file url assigned</p>
+                        <p>Indicates if the <code>QEDFile</code> can be uploaded.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hasRemoteFile</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">canAttemptFileUpload</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>false</code> If the file does not have a local File to upload.
+<code>false</code> If the file <code>uploadStatus == uploaded</code> since it is already uploaded.
+<code>false</code> If the file <code>uploadStatus == external</code> since the file is not meant to be uploaded to storate servers.
+<code>false</code> If not enough time has passed since the last upload attempt.
+<code>true</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK7QEDFileV29updatingFileUploadAttemptDateyAC10Foundation0G0VF"></a>
+                    <a name="//apple_ref/swift/Method/updatingFileUploadAttemptDate(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK7QEDFileV29updatingFileUploadAttemptDateyAC10Foundation0G0VF">updatingFileUploadAttemptDate(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use this method to update the date when a file upload has beet attempted for the QEDFile.
+This is used in conjuction with <code><a href="../Structs/QEDFile.html#/s:6QEDSDK7QEDFileV20canAttemptFileUploadSbvp">canAttemptFileUpload</a></code> to control the file upload attempts rate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updatingFileUploadAttemptDate</span><span class="p">(</span><span class="n">_</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">QEDFile</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A copy of the QEDFile with and updated last upload attempt date</p>
                       </div>
                     </section>
                   </div>
@@ -841,6 +972,38 @@ All the properties of the provided <code>QEDFile</code> instance that are non <c
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK7QEDFileV11isIdentical2toSbAC_tF"></a>
+                    <a name="//apple_ref/swift/Method/isIdentical(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK7QEDFileV11isIdentical2toSbAC_tF">isIdentical(to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates if the instance content and ids are identical to another</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isIdentical</span><span class="p">(</span><span class="n">to</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">QEDFile</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> if <code>id</code>, <code><a href="../Structs/QEDFile.html#/s:6QEDSDK7QEDFileV4nameSSvp">name</a></code>, <code><a href="../Structs/QEDFile.html#/s:6QEDSDK7QEDFileV3extSSvp">ext</a></code>, <code><a href="../Structs/QEDFile.html#/s:6QEDSDK7QEDFileV4slugSSSgvp">slug</a></code>, <code><a href="../Structs/QEDFile.html#/s:6QEDSDK7QEDFileV12uploadStatusAC06UploadD0Ovp">uploadStatus</a></code> and <code><a href="../Structs/QEDFile.html#/s:6QEDSDK7QEDFileV8metadataSDySSypGSgvp">metadata</a></code> are identical
+otherwise <code>false</code></p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -898,7 +1061,9 @@ All the properties of the provided <code>QEDFile</code> instance that are non <c
 
 <p>Two <code>QEDFile</code> instances are considered equal if they have the same <code><a href="../Structs/QEDFile.html#/s:6QEDSDK7QEDFileV4slugSSSgvp">slug</a></code> (i.e. They represent the same file on the backend).</p>
 
-<p>If one or both <code>QEDFile</code>&lsquo;s are missing the <code><a href="../Structs/QEDFile.html#/s:6QEDSDK7QEDFileV4slugSSSgvp">slug</a></code>, they are considered equal if they have the same <code><a href="../Structs/QEDFile.html#/s:6QEDSDK7QEDFileV4nameSSvp">name</a></code> and <code><a href="../Structs/QEDFile.html#/s:6QEDSDK7QEDFileV3extSSvp">ext</a></code>.</p>
+<p>If one or both <code>QEDFile</code>&lsquo;s are missing the <code><a href="../Structs/QEDFile.html#/s:6QEDSDK7QEDFileV4slugSSSgvp">slug</a></code>, they are considered equal if they have the same <code>id</code>.</p>
+
+<p>If one or both <code>QEDFile</code>&rsquo;s are missing the <code>id</code>, they are considered equal if they have the same <code><a href="../Structs/QEDFile.html#/s:6QEDSDK7QEDFileV4nameSSvp">name</a></code> and <code><a href="../Structs/QEDFile.html#/s:6QEDSDK7QEDFileV3extSSvp">ext</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -917,8 +1082,8 @@ All the properties of the provided <code>QEDFile</code> instance that are non <c
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2019-04-01)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://buzztechno.com" target="_blank" rel="external">BuzzTechno</a>. All rights reserved. (Last updated: 2019-05-08)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

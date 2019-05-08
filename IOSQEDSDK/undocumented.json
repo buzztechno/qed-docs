@@ -1,17 +1,66 @@
 {
   "warnings": [
     {
-      "file": "/Users/alfhern/Documents/Development/ASDigital/QEDSDK/QEDSDK/QEDSDK/Model/QEDUserProperties.swift",
-      "line": 81,
-      "symbol": "MFMailList.dictionaryRepresentation(with:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "file": "/Users/alfhern/Documents/Development/ASDigital/QEDSDK/QEDSDK/QEDSDK/Model/QEDFile.swift",
+      "line": 228,
+      "symbol": "QEDFile.metadataStore",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alfhern/Documents/Development/ASDigital/QEDSDK/QEDSDK/QEDSDK/Model/QEDReport.swift",
+      "line": 229,
+      "symbol": "QEDReport.metadataStore",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alfhern/Documents/Development/ASDigital/QEDSDK/QEDSDK/QEDSDK/Model/QEDUserProperties.swift",
-      "line": 93,
-      "symbol": "MFMailList.statusString",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "line": 26,
+      "symbol": "QEDUserProperties.init(email:phone:mailingLists:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alfhern/Documents/Development/ASDigital/QEDSDK/QEDSDK/QEDSDK/Networking/QEDAPI.swift",
+      "line": 301,
+      "symbol": "QEDAPI.Notifications",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alfhern/Documents/Development/ASDigital/QEDSDK/QEDSDK/QEDSDK/Networking/QEDAPI.swift",
+      "line": 304,
+      "symbol": "QEDAPI.Notifications.Name.downloadComplete",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alfhern/Documents/Development/ASDigital/QEDSDK/QEDSDK/QEDSDK/Networking/QEDAPI.swift",
+      "line": 305,
+      "symbol": "QEDAPI.Notifications.Name.uploadComplete",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alfhern/Documents/Development/ASDigital/QEDSDK/QEDSDK/QEDSDK/Networking/QEDAPI.swift",
+      "line": 309,
+      "symbol": "QEDAPI.Notifications.UserInfo.error",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alfhern/Documents/Development/ASDigital/QEDSDK/QEDSDK/QEDSDK/Networking/QEDAPI.swift",
+      "line": 310,
+      "symbol": "QEDAPI.Notifications.UserInfo.url",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alfhern/Documents/Development/ASDigital/QEDSDK/QEDSDK/QEDSDK/Networking/QEDAPI.swift",
+      "line": 311,
+      "symbol": "QEDAPI.Notifications.UserInfo.sourceId",
+      "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     }
   ],

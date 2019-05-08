@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>FileType Enumeration Reference</title>
+    <title>UploadStatus Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/FileType" class="dashAnchor"></a>
-    <a title="FileType Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Enum/UploadStatus" class="dashAnchor"></a>
+    <a title="UploadStatus Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../../index.html">QEDSDK Docs</a> (93% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../../index.html">QEDSDK Reference</a>
         <img id="carat" src="../../img/carat.png" />
-        FileType Enumeration Reference
+        UploadStatus Enumeration Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -92,14 +92,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>FileType</h1>
+            <h1>UploadStatus</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">FileType</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">UploadStatus</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                 </div>
               </div>
-            <p>Describe the type of content for a file</p>
+            <p>Describes the upload status of the file to storage servers</p>
 
           </section>
           <section class="section task-group-section">
@@ -115,9 +115,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK7QEDFileV8FileTypeO7unknownyA2EmF"></a>
+                    <a name="/s:6QEDSDK7QEDFileV12UploadStatusO7unknownyA2EmF"></a>
                     <a name="//apple_ref/swift/Element/unknown" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK7QEDFileV8FileTypeO7unknownyA2EmF">unknown</a>
+                    <a class="token" href="#/s:6QEDSDK7QEDFileV12UploadStatusO7unknownyA2EmF">unknown</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -125,7 +125,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The file type is not video or image</p>
+                        <p>The file upload has not yet been triggered or is not expected</p>
 
                       </div>
                       <div class="declaration">
@@ -142,9 +142,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK7QEDFileV8FileTypeO5imageyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/image" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK7QEDFileV8FileTypeO5imageyA2EmF">image</a>
+                    <a name="/s:6QEDSDK7QEDFileV12UploadStatusO7pendingyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/pending" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK7QEDFileV12UploadStatusO7pendingyA2EmF">pending</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -152,14 +152,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The file correspond to an image file</p>
+                        <p>The file upload has been triggered but the complete notification from storage serers has not yet been received.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">image</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">pending</span></code></pre>
 
                         </div>
                       </div>
@@ -169,9 +169,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK7QEDFileV8FileTypeO5videoyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/video" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK7QEDFileV8FileTypeO5videoyA2EmF">video</a>
+                    <a name="/s:6QEDSDK7QEDFileV12UploadStatusO8uploadedyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/uploaded" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK7QEDFileV12UploadStatusO8uploadedyA2EmF">uploaded</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -179,14 +179,74 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The file correspond to a video file</p>
+                        <p>The file upload has been triggered and the complete notification from storage serers has been received.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">video</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">uploaded</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK7QEDFileV12UploadStatusO8externalyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/external" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK7QEDFileV12UploadStatusO8externalyA2EmF">external</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The file is not meant to be uploaded to storage servers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">external</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6QEDSDK7QEDFileV12UploadStatusO13fromAPIStringAESS_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(fromAPIString:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK7QEDFileV12UploadStatusO13fromAPIStringAESS_tcfc">init(fromAPIString:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code>UploadStatus</code> instance based on the string representation from <a href="http://docs.qed.digital"><em>QED REST API</em></a> response</p>
+<li>uploadStatus: A string representing the status</li>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    When an invalid string is passed as <code><a href="../../Structs/QEDFile.html#/s:6QEDSDK7QEDFileV12uploadStatusAC06UploadD0Ovp">uploadStatus</a></code> the created instance will default to <code><a href="../../Structs/QEDFile/UploadStatus.html#/s:6QEDSDK7QEDFileV12UploadStatusO7unknownyA2EmF">unknown</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">fromAPIString</span> <span class="nv">uploadStatus</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -197,19 +257,19 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Initialization"></a>
-                <a name="//apple_ref/swift/Section/Initialization" class="dashAnchor"></a>
-                <a href="#/Initialization">
-                  <h3 class="section-name">Initialization</h3>
+                <a name="/Representations"></a>
+                <a name="//apple_ref/swift/Section/Representations" class="dashAnchor"></a>
+                <a href="#/Representations">
+                  <h3 class="section-name">Representations</h3>
                 </a>
               </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6QEDSDK7QEDFileV8FileTypeO4fromAESS_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6QEDSDK7QEDFileV8FileTypeO4fromAESS_tcfc">init(from:)</a>
+                    <a name="/s:6QEDSDK7QEDFileV12UploadStatusO6stringSSvp"></a>
+                    <a name="//apple_ref/swift/Property/string" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6QEDSDK7QEDFileV12UploadStatusO6stringSSvp">string</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -217,35 +277,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates a <code>FileType</code> instance based on a file extension string <code><a href="../../Structs/QEDFile.html#/s:6QEDSDK7QEDFileV3extSSvp">ext</a></code></p>
+                        <p>The string value used to represent the status on <code><a href="../../Classes/QEDAPI.html">QEDAPI</a></code> transactions</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">from</span> <span class="nv">ext</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>ext</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A string representing the file extension</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
